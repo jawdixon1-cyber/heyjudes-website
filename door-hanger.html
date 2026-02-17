@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hey Jude's Door Hanger</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,800;1,900&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    background:#1a1a1a;
+    display:flex;
+    justify-content:center;
+    padding:32px 16px;
+    min-height:100vh;
+    font-family:'Montserrat',system-ui,sans-serif;
+  }
+  .hanger{
+    width:420px;
+    max-width:100%;
+    border-radius:22px;
+    overflow:hidden;
+    color:#fff;
+    position:relative;
+  }
+
+  /* ── Grass background covering full card ── */
+  .grass-full{
+    position:absolute;
+    inset:0;
+    background:url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Lawn_grass.jpg/1280px-Lawn_grass.jpg') center bottom/cover no-repeat;
+  }
+
+  /* ── Black overlay fading to transparent toward bottom ── */
+  .dark-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(180deg,
+      #000 0%,
+      #000 38%,
+      rgba(0,0,0,.85) 48%,
+      rgba(0,0,0,.55) 60%,
+      rgba(0,0,0,.3) 72%,
+      rgba(0,0,0,.15) 85%,
+      rgba(0,0,0,.1) 100%
+    );
+  }
+
+  /* ── Content sits above backgrounds ── */
+  .content{
+    position:relative;
+    z-index:1;
+    text-align:center;
+    padding:0 28px;
+    min-height:920px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+
+  /* ── Hole with green ring ── */
+  .hole-wrap{
+    display:flex;
+    justify-content:center;
+    padding-top:20px;
+    margin-bottom:16px;
+  }
+  .hole{
+    width:100px;height:100px;
+    border-radius:50%;
+    background:#fff;
+    border:4px solid #B0FF03;
+    box-shadow:0 0 20px rgba(176,255,3,.4), 0 0 40px rgba(176,255,3,.15);
+  }
+
+  /* ── Brand line ── */
+  .brand-line{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    margin-bottom:6px;
+  }
+  .brand-line::before,.brand-line::after{
+    content:'';
+    height:1px;
+    width:40px;
+    background:rgba(255,255,255,.25);
+  }
+  .brand-line span{
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:3.5px;
+    text-transform:uppercase;
+    color:rgba(255,255,255,.6);
+    white-space:nowrap;
+  }
+
+  /* ── Headlines ── */
+  .h-white{
+    font-size:min(34px,8.5vw);
+    font-weight:900;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+    line-height:1.08;
+    white-space:nowrap;
+  }
+  .h-green{
+    font-size:min(48px,12vw);
+    font-weight:900;
+    font-style:italic;
+    text-transform:uppercase;
+    color:#B0FF03;
+    line-height:1.0;
+    letter-spacing:1px;
+    text-shadow:0 0 30px rgba(176,255,3,.3);
+    white-space:nowrap;
+  }
+
+  /* ── Divider ── */
+  .line{
+    height:2px;
+    margin:14px 0;
+    width:75%;
+    align-self:center;
+    background:linear-gradient(90deg,transparent,#B0FF03 20%,#B0FF03 80%,transparent);
+    opacity:.7;
+  }
+
+  /* ── Report section ── */
+  .report{
+    margin-top:8px;
+    width:100%;
+  }
+  .report p{
+    font-size:16px;
+    font-weight:700;
+    line-height:1.55;
+    color:rgba(255,255,255,.9);
+  }
+  .phone{
+    display:block;
+    font-size:min(34px,8.5vw);
+    font-weight:900;
+    color:#B0FF03;
+    text-decoration:none;
+    margin-top:10px;
+    line-height:1;
+    letter-spacing:-0.5px;
+    text-shadow:0 0 20px rgba(176,255,3,.25);
+  }
+  .guar{
+    font-size:11px;
+    font-weight:600;
+    color:rgba(255,255,255,.45);
+    margin-top:4px;
+    letter-spacing:.3px;
+  }
+
+  /* ── Referral ── */
+  .referral{
+    margin-top:10px;
+    width:100%;
+  }
+  .ref-lead{
+    font-size:16px;
+    font-weight:700;
+    color:rgba(255,255,255,.9);
+    line-height:1.4;
+    margin-bottom:4px;
+  }
+  .ref-price{
+    margin:2px 0;
+  }
+  .ref-amt{
+    font-size:min(56px,14vw);
+    font-weight:900;
+    font-style:italic;
+    color:#B0FF03;
+    line-height:.9;
+    letter-spacing:-2px;
+    text-shadow:0 0 20px rgba(176,255,3,.25);
+  }
+  .ref-off{
+    font-size:min(26px,6.5vw);
+    font-weight:900;
+    color:#fff;
+    text-transform:uppercase;
+    margin-left:2px;
+  }
+  .ref-next{
+    font-size:14px;
+    font-weight:700;
+    color:rgba(255,255,255,.8);
+    margin-top:0;
+    margin-bottom:12px;
+  }
+  .ref-cta{
+    font-size:13.5px;
+    font-weight:600;
+    color:rgba(255,255,255,.65);
+    line-height:1.5;
+  }
+
+  /* ── Bottom logo area ── */
+  .logo-area{
+    margin-top:auto;
+    padding-top:40px;
+    padding-bottom:20px;
+  }
+  .logo-img{
+    height:100px;
+    width:auto;
+    display:block;
+    margin:0 auto;
+    filter:drop-shadow(0 4px 12px rgba(0,0,0,.5));
+  }
+  .url{
+    font-size:12px;
+    font-weight:700;
+    color:rgba(255,255,255,.55);
+    letter-spacing:.5px;
+    margin-top:8px;
+  }
+</style>
+</head>
+<body>
+<div class="hanger">
+  <div class="grass-full"></div>
+  <div class="dark-overlay"></div>
+
+  <div class="content">
+
+    <div class="hole-wrap"><div class="hole"></div></div>
+
+    <div class="brand-line"><span>Hey Jude's Lawn Care</span></div>
+
+    <div class="h-white">WE JUST FINISHED</div>
+    <div class="h-green">YOUR YARD</div>
+
+    <div class="line"></div>
+
+    <div class="report">
+      <p>See anything we missed?<br>Text us a photo<br>We'll handle it immediately.</p>
+      <a class="phone" href="tel:+18039027447">(803) 902-7447</a>
+      <div class="guar">100% Satisfaction Guaranteed</div>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="referral">
+      <div class="ref-lead">Love the results? Refer a neighbor</div>
+      <div class="ref-price">
+        <span class="ref-amt">$25</span>
+        <span class="ref-off">OFF</span>
+      </div>
+      <div class="ref-next">Next Service</div>
+      <div class="ref-cta">Tell us their name, or have them<br>mention you when they book</div>
+    </div>
+
+    <div class="logo-area">
+      <img class="logo-img" src="https://assets.cdn.filesafe.space/Umlo2UnfqbijiGqNU6g2/media/699087250084985e836cdab6.png" alt="Hey Jude's Lawn Care"/>
+      <div class="url">heyjudeslawncare.com</div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
