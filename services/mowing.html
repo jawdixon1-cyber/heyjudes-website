@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 
   <title>Lawn Mowing in Rock Hill, SC | Hey Jude's Lawn Care</title>
-  <meta name="description" content="Professional lawn mowing in Rock Hill, SC with crisp edges and a clean finish every visit. Weekly or biweekly. Clear communication. Call or text (803) 902-7447 for a fast quote." />
+  <meta name="description" content="Professional lawn mowing in Rock Hill, SC. Crisp edges, clean finish every visit. Weekly or biweekly. 130+ 5-star reviews. Get a free quote." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
-  <link rel="canonical" href="https://heyjudeslawncare.com/mowing" />
+  <link rel="canonical" href="https://heyjudeslawncare.com/lawn-mowing" />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Lawn Mowing in Rock Hill, SC | Hey Jude's Lawn Care" />
   <meta property="og:description" content="Reliable, detail-focused mowing with crisp edges and a clean finish every visit. Weekly or biweekly. Get a fast quote." />
-  <meta property="og:url" content="https://heyjudeslawncare.com/mowing" />
+  <meta property="og:url" content="https://heyjudeslawncare.com/lawn-mowing" />
   <meta property="og:site_name" content="Hey Jude's Lawn Care" />
   <meta property="og:image" content="https://assets.cdn.filesafe.space/Umlo2UnfqbijiGqNU6g2/media/699139f1c086655da4014c81.png" />
   <meta property="og:image:width" content="1200" />
@@ -27,33 +27,16 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LawnAndGardenService",
+    "@type": ["LawnAndGardenService", "LocalBusiness"],
     "name": "Hey Jude's Lawn Care",
     "description": "Professional lawn mowing in Rock Hill, SC with crisp edges and a clean finish every visit. Weekly or biweekly service available.",
-    "url": "https://heyjudeslawncare.com/mowing",
+    "url": "https://heyjudeslawncare.com/lawn-mowing",
     "telephone": "+1-803-902-7447",
-    "areaServed": [
-      {
-        "@type": "City",
-        "name": "Rock Hill",
-        "addressRegion": "SC"
-      },
-      {
-        "@type": "City",
-        "name": "Fort Mill",
-        "addressRegion": "SC"
-      },
-      {
-        "@type": "City",
-        "name": "Tega Cay",
-        "addressRegion": "SC"
-      },
-      {
-        "@type": "City",
-        "name": "Lake Wylie",
-        "addressRegion": "SC"
-      }
-    ],
+    "areaServed": {
+      "@type": "City",
+      "name": "Rock Hill",
+      "addressRegion": "SC"
+    },
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Rock Hill",
@@ -150,11 +133,21 @@
           "@type": "Answer",
           "text": "No. As long as we have access to the property and pets are secured, you don't need to be present. We'll handle everything and leave your yard looking sharp."
         }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you actually communicate?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. You'll get a reminder the day before your scheduled service and a message when we're on the way. No guessing when we're coming, no wondering if we showed up. Clear, consistent communication is part of how we operate."
+        }
       }
     ]
   }
   </script>
 
+  <link rel="icon" href="/favicon.ico">
+  <link rel="preload" as="image" href="https://assets.cdn.filesafe.space/Umlo2UnfqbijiGqNU6g2/media/6990a89bc086658638d69137.png">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet" />
@@ -339,7 +332,7 @@
     }
     .hj-navbar-spacer{ height: 0px; }
     @media (max-width: 768px){
-      .hj-navbar-links, .hj-nav-phone{ display:none; }
+      .hj-navbar-links{ display:none; }
       .hj-nav-toggle{ display:flex; }
       .hj-navbar-links.is-open{
         display:flex;
@@ -600,17 +593,7 @@
       margin-bottom: 14px;
       position: relative;
     }
-    .section-head::before{
-      content:"";
-      position:absolute;
-      left:-22px;
-      right:-22px;
-      top:-18px;
-      height: 80px;
-      background: radial-gradient(circle at 50% 62%, rgba(176,255,3,.10), rgba(176,255,3,0) 70%);
-      pointer-events:none;
-      opacity:.75;
-    }
+    .section-head::before{ display:none; }
     .section h2{
       position: relative;
       margin: 0 0 10px;
@@ -876,6 +859,20 @@
       border-radius: var(--hj-radius);
       object-fit:cover;
     }
+    /* ===== Form section heading ===== */
+    .hj-form-section-heading{
+      margin:0 0 22px;
+      font-weight:900;
+      font-size:clamp(24px, 5.4vw, 34px);
+      line-height:1.1;
+      letter-spacing:-.3px;
+      color:#fff;
+      text-align:center;
+    }
+    #quote-section{
+      scroll-margin-top: 120px;
+    }
+
     .hero-cta-mobile{ display:none; }
     .quote-micro-desktop{ display:block; }
     .hero-form-desktop{ display:block; }
@@ -914,52 +911,28 @@
       .hj-badge{ font-size: 11.5px; }
       .hero-lede{ font-size: 15.5px; }
     }
+
+    /* ===== Footer ===== */
+    .hj-footer{ background:var(--hj-black,#000); border-top:1px solid rgba(255,255,255,.08); padding:44px 0 28px; color:rgba(255,255,255,.65); font-size:13.5px; font-weight:700; line-height:1.5; width:100vw; margin-left:calc(-50vw + 50%); }
+    .hj-footer a{ text-decoration:none; color:rgba(255,255,255,.65); transition:color .18s ease; }
+    .hj-footer a:hover{ color:#fff; }
+    .hj-footer-grid{ display:grid; grid-template-columns:1fr 1fr; gap:32px; padding-bottom:28px; border-bottom:1px solid rgba(255,255,255,.08); }
+    .hj-footer-logo{ height:40px; width:auto; display:block; margin-bottom:10px; }
+    .hj-footer-tagline{ margin:0; color:var(--hj-green,#B0FF03); font-weight:800; font-size:13px; font-style:italic; }
+    .hj-footer-info{ display:flex; gap:40px; }
+    .hj-footer-block p{ margin:0; }
+    .hj-footer-heading{ font-weight:900; color:rgba(255,255,255,.88); font-size:14px; margin-bottom:8px; letter-spacing:.2px; }
+    .hj-footer-phone{ font-weight:800; font-size:15px; color:rgba(255,255,255,.85)!important; }
+    .hj-footer-bottom{ display:flex; align-items:center; justify-content:space-between; padding-top:20px; font-size:12.5px; color:rgba(255,255,255,.45); }
+    .hj-footer-bottom p{ margin:0; }
+    .hj-footer-links{ display:flex; gap:20px; }
+    .hj-footer-links a{ color:rgba(255,255,255,.45); font-size:12.5px; }
+    .hj-footer-links a:hover{ color:rgba(255,255,255,.75); }
+    @media(max-width:600px){ .hj-footer-grid{ grid-template-columns:1fr; gap:24px; } .hj-footer-info{ flex-direction:column; gap:20px; } .hj-footer-bottom{ flex-direction:column; gap:12px; text-align:center; } }
   </style>
 
   <!-- Schema: LocalBusiness + Service -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"LocalBusiness",
-    "name":"Hey Jude's Lawn Care",
-    "url":"https://heyjudeslawncare.com/",
-    "telephone":"+18039027447",
-    "address":{
-      "@type":"PostalAddress",
-      "addressLocality":"Rock Hill",
-      "addressRegion":"SC",
-      "addressCountry":"US"
-    },
-    "areaServed":[
-      {"@type":"City","name":"Rock Hill","addressRegion":"SC","addressCountry":"US"}
-    ],
-    "makesOffer":{
-      "@type":"Offer",
-      "itemOffered":{
-        "@type":"Service",
-        "name":"Lawn Mowing",
-        "serviceType":"Weekly and biweekly lawn mowing, edging, trimming, blow-off",
-        "areaServed":"Rock Hill, SC"
-      }
-    }
-  }
-  </script>
 
-  <!-- Schema: FAQPage -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {"@type":"Question","name":"How much does lawn mowing cost in Rock Hill, SC?","acceptedAnswer":{"@type":"Answer","text":"Pricing depends on lawn size, layout, trimming detail, and service frequency. Most properties fall into a consistent range once we review the address and photos. The fastest way to get accurate pricing is to complete the quote form and upload a few pictures of your yard."}},
-      {"@type":"Question","name":"Do you require a contract?","acceptedAnswer":{"@type":"Answer","text":"No long-term contracts required. We believe in earning your business through consistency and quality, not paperwork. If growth changes and your schedule needs to adjust, we'll adapt."}},
-      {"@type":"Question","name":"Do you offer one-time mowing?","acceptedAnswer":{"@type":"Answer","text":"We focus on recurring weekly and biweekly mowing to maintain consistent results. One-time services are typically handled through our yard cleanup services instead. Consistency is what keeps lawns healthy and looking finished."}},
-      {"@type":"Question","name":"What if it rains on my scheduled day?","acceptedAnswer":{"@type":"Answer","text":"If weather prevents us from mowing safely or properly, we reschedule responsibly. We don't mow soaked lawns or leave ruts just to stay on schedule. Your lawn's condition comes first."}},
-      {"@type":"Question","name":"Do you bag clippings?","acceptedAnswer":{"@type":"Answer","text":"We typically mulch clippings, which helps return nutrients back into the lawn and supports healthier growth. If you prefer clippings to be bagged, just let us know when submitting your quote request. We'll factor that into your service plan and pricing if needed."}},
-      {"@type":"Question","name":"Do I need to be home during service?","acceptedAnswer":{"@type":"Answer","text":"No. As long as we have access to the property and pets are secured, you don't need to be present. We'll handle everything and leave your yard looking sharp."}}
-    ]
-  }
-  </script>
 </head>
 
 <body>
@@ -967,17 +940,17 @@
     <div class="wrap">
       <div class="hj-navbar-inner">
         <a class="hj-navbar-logo" href="/" aria-label="Hey Jude's Lawn Care home">
-          <img src="https://assets.cdn.filesafe.space/Umlo2UnfqbijiGqNU6g2/media/699087250084985e836cdab6.png" alt="Hey Jude's Lawn Care" />
+          <img src="https://assets.cdn.filesafe.space/Umlo2UnfqbijiGqNU6g2/media/699087250084985e836cdab6.png" alt="Hey Jude's Lawn Care" width="180" height="52" />
         </a>
 
-        <button class="hj-nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.hj-navbar-links').classList.toggle('is-open')">
+        <button class="hj-nav-toggle" aria-label="Toggle menu" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false'?'true':'false');document.querySelector('.hj-navbar-links').classList.toggle('is-open')">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
         </button>
 
         <div class="hj-navbar-links">
           <a href="/">Home</a>
           <div class="hj-nav-dropdown">
-            <a href="/services">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></a>
+            <a href="#" onclick="return false">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></a>
             <div class="hj-nav-dd-menu">
               <a href="/lawn-mowing">Lawn Mowing</a>
               <a href="/mulch-installation">Mulch Installation</a>
@@ -987,7 +960,7 @@
             <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8c1.5 3 3.6 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V21c0 .6-.4 1-1 1C11.4 22 2 12.6 2 1c0-.6.4-1 1-1h3.9c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z"/></svg>
             (803) 902-7447
           </a>
-          <a class="hj-nav-cta" href="javascript:void(0)" onclick="if(window.innerWidth>900){window.scrollTo(0,0);document.documentElement.scrollTop=0;document.body.scrollTop=0;}else{var f=document.querySelector('.quote-card');if(f)f.scrollIntoView({behavior:'smooth'});}">Get Quote</a>
+          <a class="hj-nav-cta" href="javascript:void(0)" onclick="if(window.innerWidth>900){document.documentElement.scrollTop=0;document.body.scrollTop=0;}else{var s=document.getElementById('quote-section');if(s)s.scrollIntoView({behavior:'smooth'});}">Get Quote</a>
         </div>
       </div>
     </div>
@@ -1019,6 +992,7 @@
   })();
   </script>
 
+  <main>
   <!-- HERO -->
   <header class="hero">
     <div class="wrap">
@@ -1027,7 +1001,7 @@
           <div class="hj-badge-wrap">
             <div class="hj-badge" role="status">
               <span class="hj-dot" aria-hidden="true"></span>
-              Lawn Mowing • Rock Hill, SC
+              Lawn Mowing &bull; Rock Hill, SC
             </div>
           </div>
 
@@ -1046,13 +1020,15 @@
           </div>
 
           <div class="btn-row hero-cta-mobile">
-            <a class="btn btn-primary" href="#quote" aria-label="Request your free quote">Request Your Free Quote</a>
+            <a class="btn btn-primary" href="javascript:void(0)" onclick="if(window.innerWidth>900){document.documentElement.scrollTop=0;document.body.scrollTop=0;}else{var s=document.getElementById('quote-section');if(s)s.scrollIntoView({behavior:'smooth'});}" aria-label="Request your free quote">Request Your Free Quote</a>
           </div>
         </div>
 
         <div class="hero-form-desktop">
-        <!-- Quick quote multi-step form -->
-        <aside class="quote-card" id="quote" aria-label="Quick quote form">
+        <div id="quote-section">
+          <h2 class="hj-form-section-heading">FREE Quotes</h2>
+          <!-- Quick quote multi-step form -->
+          <aside class="quote-card" id="quote" aria-label="Quick quote form">
           <div class="quote-top">
             <p class="quote-title">Get your free quote</p>
           </div>
@@ -1097,20 +1073,20 @@
               </div>
               <div class="field">
                 <label class="label" for="hero-street">Street address</label>
-                <input class="input" id="hero-street" name="street" placeholder="—" />
+                <input class="input" id="hero-street" name="street" placeholder="-" />
               </div>
               <div style="display:grid; grid-template-columns:1fr .6fr .5fr; gap:10px;">
                 <div class="field">
                   <label class="label" for="hero-city">City</label>
-                  <input class="input" id="hero-city" name="city" placeholder="—" />
+                  <input class="input" id="hero-city" name="city" placeholder="-" />
                 </div>
                 <div class="field">
                   <label class="label" for="hero-state">State</label>
-                  <input class="input" id="hero-state" name="state" placeholder="—" />
+                  <input class="input" id="hero-state" name="state" placeholder="-" />
                 </div>
                 <div class="field">
                   <label class="label" for="hero-zip">Zip</label>
-                  <input class="input" id="hero-zip" name="zip" placeholder="—" />
+                  <input class="input" id="hero-zip" name="zip" placeholder="-" />
                 </div>
               </div>
             </div>
@@ -1163,7 +1139,8 @@
             </div>
             <div class="micro" style="text-align:center; margin-top:8px;">Fast response. Clear pricing. No pressure.</div>
           </form>
-        </aside>
+          </aside>
+        </div>
         </div>
       </div>
     </div>
@@ -1338,7 +1315,7 @@
           <div class="callout feature">If you're hiring it out, it should be done right.</div>
         </div>
         <div class="brand-img-col">
-          <img src="https://assets.cdn.filesafe.space/Umlo2UnfqbijiGqNU6g2/media/6991fc0ca9efde8dfd741c62.png" alt="Hey Jude's mascot" class="brand-dog-img" />
+          <img src="https://assets.cdn.filesafe.space/Umlo2UnfqbijiGqNU6g2/media/6991fc0ca9efde8dfd741c62.png" alt="Hey Jude's mascot" class="brand-dog-img" width="400" height="400" />
         </div>
       </div>
     </div>
@@ -1448,7 +1425,7 @@
       </div>
 
       <p>Usually it starts with a sentence we hear all the time:</p>
-      <div class="callout">"My last lawn guy was fine…"</div>
+      <div class="callout">&ldquo;My last lawn guy was fine&hellip;&rdquo;</div>
 
       <div class="grid-2">
         <div class="card">
@@ -1510,7 +1487,7 @@
         <div class="card">
           <h3>What you can expect</h3>
           <p>
-            Every Rock Hill mowing visit is a set price — no guessing, no fluctuating rates.
+            Every Rock Hill mowing visit is a set price. No guessing, no fluctuating rates.
             If your frequency changes, your price adjusts accordingly.
             We send clear, straightforward quotes so you know exactly what you're paying before we start.
           </p>
@@ -1608,6 +1585,13 @@
             No. As long as we have access to the property and pets are secured, you don't need to be present. We'll handle everything and leave your yard looking sharp.
           </div>
         </details>
+
+        <details class="faq-item">
+          <summary><span>Do you actually communicate?</span><span class="faq-plus" aria-hidden="true"></span></summary>
+          <div class="faq-body">
+            Yes. You'll get a reminder the day before your scheduled service and a message when we're on the way. No guessing when we're coming, no wondering if we showed up. Clear, consistent communication is part of how we operate.
+          </div>
+        </details>
       </div>
     </div>
   </section>
@@ -1617,19 +1601,43 @@
     <div class="wrap" style="text-align:center;">
       <p style="margin:0 0 6px; font-weight:900; font-size: clamp(24px, 5vw, 34px); line-height:1.1; color:var(--hj-white);">Ready to get started?</p>
       <p style="margin:0 0 18px; font-weight:700; font-size:15px; color:var(--hj-muted);">Fill out the form and we'll get back to you fast.</p>
-      <a class="btn btn-primary" href="#quote" style="display:inline-flex;">Get Your Free Quote</a>
+      <a class="btn btn-primary" href="javascript:void(0)" onclick="if(window.innerWidth>900){document.documentElement.scrollTop=0;document.body.scrollTop=0;}else{var s=document.getElementById('quote-section');if(s)s.scrollIntoView({behavior:'smooth'});}" style="display:inline-flex;">Get Your Free Quote</a>
     </div>
   </section>
+  </main>
 
-  <footer class="footer">
+  <footer class="hj-footer">
     <div class="wrap">
-      © <span id="y"></span> Hey Jude's Lawn Care · Lawn Mowing in Rock Hill, SC · Call/Text (803) 902-7447
+      <div class="hj-footer-grid">
+        <div class="hj-footer-brand">
+          <a href="/" aria-label="Hey Jude's Lawn Care home">
+            <img src="https://assets.cdn.filesafe.space/Umlo2UnfqbijiGqNU6g2/media/699087250084985e836cdab6.png" alt="Hey Jude's Lawn Care" class="hj-footer-logo" width="180" height="40" />
+          </a>
+          <p class="hj-footer-tagline">Raise The Standard.</p>
+        </div>
+        <div class="hj-footer-info">
+          <div class="hj-footer-block">
+            <div class="hj-footer-heading">Hours</div>
+            <p>Monday &ndash; Saturday: 9:00 AM &ndash; 6:00 PM</p>
+            <p>Sunday: Closed</p>
+          </div>
+          <div class="hj-footer-block">
+            <div class="hj-footer-heading">Contact</div>
+            <a href="tel:+18039027447" class="hj-footer-phone">(803) 902-7447</a>
+          </div>
+        </div>
+      </div>
+      <div class="hj-footer-bottom">
+        <p>&copy; 2026 Hey Jude's Lawn Care. All rights reserved.</p>
+        <div class="hj-footer-links">
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/terms-of-service">Terms of Service</a>
+        </div>
+      </div>
     </div>
   </footer>
 
   <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-
     // Auto-format phone numbers
     function formatPhone(input) {
       input.addEventListener('input', function() {
@@ -1643,29 +1651,17 @@
     if (document.getElementById('hero-phone')) formatPhone(document.getElementById('hero-phone'));
 
     // Smooth scrolling for in-page anchors
-    (function(){
-      function smoothScrollTo(hash){
-        var el = document.querySelector(hash);
-        if(!el) return false;
-        if (hash === '#quote' && window.innerWidth > 900) {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        } else {
-          var y = el.getBoundingClientRect().top + window.pageYOffset - 80;
-          window.scrollTo({ top: y, behavior: 'smooth' });
-        }
-        return true;
-      }
-      document.addEventListener('click', function(e){
-        var a = e.target.closest('a[href^="#"]');
-        if(!a) return;
-        var hash = a.getAttribute('href');
-        if(hash && hash.length > 1 && document.querySelector(hash)){
-          e.preventDefault();
-          smoothScrollTo(hash);
-          history.replaceState(null, '', hash);
-        }
-      });
-    })();
+    document.addEventListener('click', function(e){
+      var a = e.target.closest('a[href^="#"]');
+      if(!a) return;
+      var hash = a.getAttribute('href');
+      if(!hash || hash.length <= 1) return;
+      e.preventDefault();
+      var menu = document.querySelector('.hj-navbar-links');
+      if(menu) menu.classList.remove('is-open');
+      var el = document.querySelector(hash);
+      if(el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
 
     // Logo slide-in on scroll
     (function(){
@@ -1686,7 +1682,7 @@
 
     // Move form between hero (desktop) and its own section (mobile)
     (function(){
-      var form = document.getElementById('quote');
+      var form = document.getElementById('quote-section');
       var desktopSlot = document.querySelector('.hero-form-desktop');
       var mobileSlot = document.querySelector('#mobile-form-section .wrap');
       if (!form || !desktopSlot || !mobileSlot) return;

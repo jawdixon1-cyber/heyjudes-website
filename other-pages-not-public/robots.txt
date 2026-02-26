@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /client-update
+Disallow: /ex-client
+Disallow: /door-hanger
+Disallow: /hiring
+Disallow: /thank-you
+Disallow: /thankyou
+Disallow: /client-update.backup
+
+Sitemap: https://heyjudeslawncare.com/sitemap.xml

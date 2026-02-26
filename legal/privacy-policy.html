@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Privacy Policy | Hey Jude's Lawn Care</title>
+<meta name="description" content="Privacy policy for Hey Jude's Lawn Care. How we collect, use, and protect your information." />
+<meta name="robots" content="noindex,nofollow" />
+<link rel="canonical" href="https://heyjudeslawncare.com/privacy-policy" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Privacy Policy | Hey Jude's Lawn Care" />
+<meta property="og:description" content="Privacy policy for Hey Jude's Lawn Care. How we collect, use, and protect your information." />
+<meta property="og:url" content="https://heyjudeslawncare.com/privacy-policy" />
+<meta property="og:site_name" content="Hey Jude's Lawn Care" />
+<meta property="og:image" content="https://assets.cdn.filesafe.space/Umlo2UnfqbijiGqNU6g2/media/6990a89bc086658638d69137.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Privacy Policy | Hey Jude's Lawn Care" />
+<meta name="twitter:description" content="Privacy policy for Hey Jude's Lawn Care. How we collect, use, and protect your information." />
+<meta name="twitter:image" content="https://assets.cdn.filesafe.space/Umlo2UnfqbijiGqNU6g2/media/6990a89bc086658638d69137.png" />
+
+<link rel="icon" href="/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  *{ box-sizing:border-box; }
+  body{ margin:0; background:#000; color:#fff; font-family:'Montserrat', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  a{ color:inherit; }
+
+  :root{
+    --hj-green:#B0FF03;
+    --hj-black:#000;
+    --hj-dark:#0b0b0b;
+    --hj-white:#ffffff;
+    --hj-text:#ffffff;
+    --hj-muted:rgba(255,255,255,.72);
+    --hj-card: rgba(255,255,255,.05);
+    --hj-border: rgba(255,255,255,.12);
+    --hj-border-strong: rgba(176,255,3,.26);
+    --hj-border-2:rgba(176,255,3,.22);
+    --hj-max: 1100px;
+    --hj-radius: 22px;
+    --hj-shadow: 0 22px 60px rgba(0,0,0,.55);
+  }
+
+  .wrap{ width:100%; max-width:var(--hj-max); margin:0 auto; padding:0 16px; }
+
+  /* ===== NAVIGATION (fixed, solid — no hero on this page) ===== */
+  .hj-navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    width:100%;
+    z-index:9999;
+    background:rgba(0,0,0,.92);
+    backdrop-filter:blur(16px);
+    -webkit-backdrop-filter:blur(16px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  .hj-navbar-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    padding: 16px 0;
+  }
+  .hj-navbar-logo{
+    display:flex;
+    align-items:center;
+    text-decoration:none;
+    flex:0 0 auto;
+  }
+  .hj-navbar-logo img{
+    height:52px;
+    width:auto;
+    display:block;
+  }
+  .hj-navbar-links{
+    display:flex;
+    align-items:center;
+    gap:4px;
+  }
+  .hj-navbar-links a{
+    text-decoration:none;
+    font-weight:800;
+    font-size:14px;
+    color:rgba(255,255,255,.88);
+    padding: 10px 14px;
+    border-radius:12px;
+    transition: color .18s ease, background .18s ease;
+    white-space:nowrap;
+  }
+  .hj-navbar-links a:hover{
+    color:#fff;
+    background:rgba(255,255,255,.08);
+  }
+  .hj-nav-cta{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:10px 22px;
+    border-radius:999px;
+    background:var(--hj-green);
+    color:#000 !important;
+    text-decoration:none;
+    font-weight:900;
+    font-size:13px;
+    border:1px solid rgba(0,0,0,.22);
+    white-space:nowrap;
+    margin-left:6px;
+    transition: transform .18s ease;
+  }
+  .hj-nav-cta:hover{ background:#c4ff33; color:#000 !important; }
+  .hj-nav-cta:active{ transform:translateY(1px); }
+  .hj-nav-phone{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    text-decoration:none;
+    font-weight:800;
+    font-size:13px;
+    color:rgba(255,255,255,.80);
+    padding:10px 14px;
+    border-radius:12px;
+    white-space:nowrap;
+    transition: color .18s ease;
+  }
+  .hj-nav-phone:hover{ color:#fff; }
+  .hj-nav-phone svg{ width:14px; height:14px; flex:0 0 auto; }
+  .hj-nav-toggle{
+    display:none;
+    width:44px; height:44px;
+    border:1px solid rgba(255,255,255,.18);
+    border-radius:12px;
+    background:rgba(0,0,0,.30);
+    backdrop-filter:blur(8px);
+    color:#fff;
+    cursor:pointer;
+    align-items:center;
+    justify-content:center;
+  }
+  .hj-nav-toggle svg{ width:22px; height:22px; }
+
+  /* ===== MOBILE NAV ===== */
+  @media (max-width: 768px){
+    .hj-navbar-links{ display:none; }
+    .hj-nav-toggle{ display:flex; }
+    .hj-navbar-links.is-open{
+      display:flex;
+      flex-direction:column;
+      position:absolute;
+      top:100%;
+      left:0;
+      right:0;
+      background:rgba(0,0,0,.95);
+      backdrop-filter:blur(16px);
+      -webkit-backdrop-filter:blur(16px);
+      border-bottom:1px solid rgba(255,255,255,.08);
+      padding:8px 16px 16px;
+      z-index:999;
+    }
+    .hj-navbar-links.is-open a{
+      padding:14px 0;
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .hj-nav-cta{ }
+    .hj-nav-dropdown{ position:relative; }
+    .hj-nav-dd-menu{
+      position:static !important;
+      min-width:0 !important;
+      background:none !important;
+      border:none !important;
+      box-shadow:none !important;
+      padding:0 0 0 16px !important;
+      border-radius:0 !important;
+      display:none;
+    }
+    .hj-nav-dd-menu.is-open{ display:block; }
+    .hj-nav-dropdown > a svg{ transition: transform .2s ease; }
+    .hj-nav-dropdown.is-open > a svg{ transform:rotate(180deg); }
+  }
+  /* ===== NAV DROPDOWN ===== */
+  .hj-nav-dropdown{
+    position:relative;
+  }
+  .hj-nav-dropdown > a{
+    display:inline-flex;
+    align-items:center;
+    gap:4px;
+  }
+  .hj-nav-dropdown > a svg{ width:14px; height:14px; transition: transform .2s ease; }
+  .hj-nav-dropdown:hover > a svg{ transform:rotate(180deg); }
+  .hj-nav-dd-menu{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    min-width:220px;
+    padding:8px 0;
+    background:rgba(15,15,15,.97);
+    border:1px solid rgba(255,255,255,.10);
+    border-radius:14px;
+    box-shadow: 0 16px 40px rgba(0,0,0,.6);
+    z-index:100;
+  }
+  @media (min-width: 769px){
+    .hj-nav-dropdown:hover .hj-nav-dd-menu{ display:block; }
+  }
+  .hj-nav-dd-menu a{
+    display:block;
+    padding:10px 16px !important;
+    font-size:14px !important;
+    border-radius:0 !important;
+    border-bottom:1px solid rgba(255,255,255,.05);
+  }
+  .hj-nav-dd-menu a:last-child{ border-bottom:none; }
+  .hj-nav-dd-menu a:hover{ background:rgba(176,255,3,.08) !important; }
+
+  /* ===== TERMS CONTENT ===== */
+  .hj-terms{
+    padding: 120px 16px 60px;
+  }
+  .hj-terms-inner{
+    max-width:800px;
+    margin:0 auto;
+  }
+  .hj-terms-inner h1{
+    font-size: clamp(32px, 6vw, 48px);
+    font-weight:900;
+    letter-spacing:-.5px;
+    margin:0 0 40px;
+    line-height:1.1;
+  }
+  .hj-terms-inner h2{
+    font-size: clamp(20px, 4vw, 26px);
+    font-weight:800;
+    letter-spacing:-.2px;
+    margin:48px 0 16px;
+    line-height:1.15;
+    color:var(--hj-white);
+  }
+  .hj-terms-inner h2:first-of-type{
+    margin-top:0;
+  }
+  .hj-terms-inner p{
+    font-size:15px;
+    font-weight:600;
+    line-height:1.7;
+    color:var(--hj-muted);
+    margin:0 0 16px;
+  }
+  .hj-terms-inner ul{
+    list-style:none;
+    padding:0;
+    margin:0 0 16px;
+  }
+  .hj-terms-inner ul li{
+    position:relative;
+    padding-left:20px;
+    font-size:15px;
+    font-weight:600;
+    line-height:1.7;
+    color:var(--hj-muted);
+    margin-bottom:6px;
+  }
+  .hj-terms-inner ul li::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:10px;
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:var(--hj-green);
+  }
+  .hj-terms-inner a{
+    color:var(--hj-green);
+    text-decoration:underline;
+    text-underline-offset:3px;
+    transition: color .18s ease;
+  }
+  .hj-terms-inner a:hover{
+    color:#c4ff33;
+  }
+  .hj-terms-inner strong{
+    color:var(--hj-white);
+    font-weight:800;
+  }
+
+  /* ===== FOOTER ===== */
+  .hj-footer{
+    background: var(--hj-black);
+    border-top: 1px solid rgba(255,255,255,.08);
+    padding: 44px 0 28px;
+    color: rgba(255,255,255,.65);
+    font-size: 13.5px;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+  .hj-footer a{ text-decoration:none; color:rgba(255,255,255,.65); transition: color .18s ease; }
+  .hj-footer a:hover{ color:#fff; }
+  .hj-footer-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+  }
+  .hj-footer-logo{
+    height: 40px;
+    width: auto;
+    display: block;
+    margin-bottom: 10px;
+  }
+  .hj-footer-tagline{
+    margin: 0;
+    color: var(--hj-green);
+    font-weight: 800;
+    font-size: 13px;
+    font-style: italic;
+  }
+  .hj-footer-info{
+    display: flex;
+    gap: 40px;
+  }
+  .hj-footer-block p{ margin: 0; }
+  .hj-footer-heading{
+    font-weight: 900;
+    color: rgba(255,255,255,.88);
+    font-size: 14px;
+    margin-bottom: 8px;
+    letter-spacing: .2px;
+  }
+  .hj-footer-phone{
+    font-weight: 800;
+    font-size: 15px;
+    color: rgba(255,255,255,.85) !important;
+  }
+  .hj-footer-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    font-size: 12.5px;
+    color: rgba(255,255,255,.45);
+  }
+  .hj-footer-bottom p{ margin: 0; }
+  .hj-footer-links{
+    display: flex;
+    gap: 20px;
+  }
+  .hj-footer-links a{ color: rgba(255,255,255,.45); font-size: 12.5px; }
+  .hj-footer-links a:hover{ color: rgba(255,255,255,.75); }
+  @media (max-width: 600px){
+    .hj-footer-grid{ grid-template-columns: 1fr; gap: 24px; }
+    .hj-footer-info{ flex-direction: column; gap: 20px; }
+    .hj-footer-bottom{ flex-direction: column; gap: 12px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="hj-navbar" id="hj-navbar" role="navigation" aria-label="Main navigation">
+  <div class="wrap">
+    <div class="hj-navbar-inner">
+      <a class="hj-navbar-logo" href="/" aria-label="Hey Jude's Lawn Care home">
+        <img src="https://assets.cdn.filesafe.space/Umlo2UnfqbijiGqNU6g2/media/699087250084985e836cdab6.png" alt="Hey Jude's Lawn Care" width="160" height="52" />
+      </a>
+
+      <button class="hj-nav-toggle" aria-label="Toggle menu" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false'?'true':'false');document.querySelector('.hj-navbar-links').classList.toggle('is-open')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+
+      <div class="hj-navbar-links">
+        <a href="/">Home</a>
+        <div class="hj-nav-dropdown">
+          <a href="#" onclick="return false">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></a>
+          <div class="hj-nav-dd-menu">
+            <a href="/lawn-mowing">Lawn Mowing</a>
+            <a href="/mulch-installation">Mulch Installation</a>
+          </div>
+        </div>
+        <a href="https://clienthub.getjobber.com/client_hubs/77f4ef25-2e43-4752-be73-fc22844ceeb6/login/new?source=share_login" target="_blank" rel="noopener">Client Portal</a>
+        <a class="hj-nav-phone" href="tel:+18039027447" aria-label="Call us">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8c1.5 3 3.6 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V21c0 .6-.4 1-1 1C11.4 22 2 12.6 2 1c0-.6.4-1 1-1h3.9c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z"/></svg>
+          (803) 902-7447
+        </a>
+        <a class="hj-nav-cta" href="/#quote-section">Get Quote</a>
+      </div>
+    </div>
+  </div>
+</nav>
+<script>
+(function(){
+  var dd = document.querySelector('.hj-nav-dropdown');
+  if(!dd) return;
+  var toggle = dd.querySelector(':scope > a');
+  var menu = dd.querySelector('.hj-nav-dd-menu');
+  if(!toggle || !menu) return;
+  toggle.addEventListener('click', function(e){
+    if(window.innerWidth <= 768){
+      e.preventDefault();
+      dd.classList.toggle('is-open');
+      menu.classList.toggle('is-open');
+    }
+  });
+
+  // Close mobile menu when clicking any link except the Services toggle
+  var navLinks = document.querySelector('.hj-navbar-links');
+  if(navLinks){
+    navLinks.querySelectorAll('a').forEach(function(link){
+      if(link === toggle) return; // skip the Services dropdown toggle
+      link.addEventListener('click', function(){
+        if(window.innerWidth <= 768){
+          navLinks.classList.remove('is-open');
+          dd.classList.remove('is-open');
+          menu.classList.remove('is-open');
+        }
+      });
+    });
+  }
+})();
+</script>
+
+<main class="hj-terms">
+  <div class="hj-terms-inner">
+    <h1>Privacy Policy</h1>
+
+    <h2>Introduction</h2>
+    <p>Hey Jude's Lawn Care ("we," "us," "our") is committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy outlines how we collect, use, and safeguard the information you provide to us, particularly through Facebook ads and other interactions with our services.</p>
+
+    <h2>Information We Collect</h2>
+    <p><strong>1. Basic Information:</strong> We collect essential contact information such as your first and last name, email address, and phone number.</p>
+    <p><strong>2. Address Details:</strong> To provide quotes and our services, we collect your address.</p>
+    <p><strong>3. Service Information:</strong> We gather details related to the lawn care services you require to better tailor our offerings to your needs.</p>
+    <p><strong>4. Cookies and Tracking:</strong> We use cookies and similar technologies from Facebook ads to track your interactions with our site and ads for marketing and analytics purposes.</p>
+
+    <h2>Cookies</h2>
+    <p>A "cookie" is a small file stored on your device that contains information about your device. We may use cookies to provide basic relevant ads, website functionality, authentication (session management), usage analytics (web analytics), and to remember your settings, and generally improve our websites and Services. We use session and persistent cookies. Session cookies are deleted when you close your browser. Persistent cookies may remain even after you close your browser, but always have an expiration date. Most of the cookies placed on your device through our Services are first-party cookies, since they are placed directly by us. Other parties, such as Google, may also set their own (third-party) cookies through our Services. Please refer to the policies of these third parties to learn more about the way in which they collect and process information about you.</p>
+    <p>If you would prefer not to accept cookies, you can change the setup of your browser to reject all or some cookies. For more information, please visit <a href="https://www.aboutcookies.org/" target="_blank" rel="noopener">https://www.aboutcookies.org/</a></p>
+    <p>You may also set your browser to send a Do Not Track (DNT) signal. For more information, please visit <a href="https://allaboutdnt.com/" target="_blank" rel="noopener">https://allaboutdnt.com/</a></p>
+
+    <h2>How We Use Your Information</h2>
+    <p><strong>1. Billing:</strong> Your information is used to process and fulfill your lawn care service orders, including recurring billing and scheduling.</p>
+    <p><strong>2. Communication:</strong> We may use your contact information to communicate with you regarding your inquiries, service updates, or to address any questions or concerns you may have.</p>
+    <p><strong>3. Marketing:</strong> We may use your information to send you promotional materials, offers, or information about new products and services.</p>
+    <p><strong>4. Security Measures:</strong> We prioritize the security of your personal information and implement industry-standard security measures to protect your data from unauthorized access, disclosure, alteration, and destruction.</p>
+    <p><strong>5. Sharing Your Information:</strong> We do not sell, trade, or otherwise transfer your personally identifiable information to third parties without your explicit consent. Your information may be shared with trusted third-party service providers who assist us in operating our website, conducting our business, or servicing you. These providers are contractually obligated to maintain the confidentiality and security of your personal information.</p>
+    <p><strong>6. Your Choices:</strong> You have the right to opt-out of receiving marketing communications from us at any time. You can do this by contacting us directly at <a href="mailto:jude@judeslawncare.com">jude@judeslawncare.com</a>.</p>
+    <p><strong>7. Changes to This Policy:</strong> This Privacy Policy may be updated periodically to reflect changes in our practices or for legal reasons.</p>
+    <p><strong>8. Contact Us:</strong> If you have any questions or concerns about this Privacy Policy, please contact us at <a href="mailto:jude@judeslawncare.com">jude@judeslawncare.com</a>.</p>
+
+    <p>By engaging with us and providing your personal information, you agree to the terms outlined in this Privacy Policy.</p>
+  </div>
+</main>
+
+<footer class="hj-footer">
+  <div class="wrap">
+    <div class="hj-footer-grid">
+      <div class="hj-footer-brand">
+        <a href="/" aria-label="Hey Jude's Lawn Care home">
+          <img src="https://assets.cdn.filesafe.space/Umlo2UnfqbijiGqNU6g2/media/699087250084985e836cdab6.png" alt="Hey Jude's Lawn Care" class="hj-footer-logo" width="160" height="40" />
+        </a>
+        <p class="hj-footer-tagline">Raise The Standard.</p>
+      </div>
+
+      <div class="hj-footer-info">
+        <div class="hj-footer-block">
+          <div class="hj-footer-heading">Hours</div>
+          <p>Monday &ndash; Saturday: 9:00 AM &ndash; 6:00 PM</p>
+          <p>Sunday: Closed</p>
+        </div>
+        <div class="hj-footer-block">
+          <div class="hj-footer-heading">Contact</div>
+          <a href="tel:+18039027447" class="hj-footer-phone">(803) 902-7447</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hj-footer-bottom">
+      <p>&copy; 2026 Hey Jude's Lawn Care. All rights reserved.</p>
+      <div class="hj-footer-links">
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/terms-of-service">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

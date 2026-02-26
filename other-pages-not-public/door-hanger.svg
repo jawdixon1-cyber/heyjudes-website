@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="450" height="1100" viewBox="0 0 450 1100">
+  <defs>
+    <linearGradient id="grassTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2e5e1a" stop-opacity="0.95"/>
+      <stop offset="35%" stop-color="#1c4012" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="grassBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="55%" stop-color="#1c4012" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#2e5e1a" stop-opacity="0.9"/>
+    </linearGradient>
+    <filter id="greenGlow" x="-15%" y="-30%" width="130%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <clipPath id="cardClip">
+      <rect x="0" y="0" width="450" height="1100" rx="22" ry="22"/>
+    </clipPath>
+    <!-- Grass blade pattern top (blades growing upward from bottom of region) -->
+    <pattern id="bladesTop" x="0" y="0" width="18" height="90" patternUnits="userSpaceOnUse">
+      <path d="M3 90 Q4 55 5 20 Q5.5 10 6 25 Q7 60 8 90" fill="none" stroke="#3d8224" stroke-width="1.4" opacity="0.45"/>
+      <path d="M11 90 Q12 50 13 15 Q13.3 6 14 22 Q15 58 16 90" fill="none" stroke="#347520" stroke-width="1.1" opacity="0.35"/>
+    </pattern>
+    <pattern id="bladesBottom" x="0" y="0" width="20" height="90" patternUnits="userSpaceOnUse">
+      <path d="M3 0 Q4 35 5 70 Q5.5 80 6 65 Q7 30 8 0" fill="none" stroke="#3d8224" stroke-width="1.4" opacity="0.45"/>
+      <path d="M12 0 Q13 40 14 75 Q14.3 84 15 68 Q16 32 17 0" fill="none" stroke="#347520" stroke-width="1.1" opacity="0.35"/>
+    </pattern>
+    <!-- Mask for door hanger hole cutout -->
+    <mask id="holeMask">
+      <rect width="450" height="1100" fill="white"/>
+      <!-- The hole cutout -->
+      <circle cx="225" cy="52" r="36" fill="black"/>
+      <!-- Slit to top -->
+      <rect x="189" y="0" width="72" height="18" fill="black"/>
+    </mask>
+  </defs>
+
+  <g mask="url(#holeMask)">
+    <!-- Main card body -->
+    <rect x="0" y="0" width="450" height="1100" rx="22" ry="22" fill="#0a0a0a"/>
+
+    <!-- Top grass region -->
+    <rect x="0" y="0" width="450" height="170" fill="url(#grassTop)" clip-path="url(#cardClip)"/>
+    <rect x="0" y="20" width="450" height="130" fill="url(#bladesTop)" opacity="0.55" clip-path="url(#cardClip)"/>
+
+    <!-- Bottom grass region -->
+    <rect x="0" y="930" width="450" height="170" fill="url(#grassBottom)" clip-path="url(#cardClip)"/>
+    <rect x="0" y="1010" width="450" height="90" fill="url(#bladesBottom)" opacity="0.55" clip-path="url(#cardClip)"/>
+
+    <!-- Subtle edge highlight around hole -->
+    <circle cx="225" cy="52" r="37" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+
+    <!-- ===== LOGO ===== -->
+    <text x="225" y="138" text-anchor="middle" font-family="'Brush Script MT','Segoe Script','Lucida Handwriting',cursive" font-size="50" fill="white" font-style="italic">Hey Jude's</text>
+    <line x1="108" y1="154" x2="177" y2="154" stroke="#B0FF03" stroke-width="1.5" opacity="0.7"/>
+    <line x1="273" y1="154" x2="342" y2="154" stroke="#B0FF03" stroke-width="1.5" opacity="0.7"/>
+    <text x="225" y="166" text-anchor="middle" font-family="'Montserrat',Arial,sans-serif" font-size="17" fill="white" font-weight="900" letter-spacing="5">LAWN CARE</text>
+
+    <!-- ===== MAIN HEADING ===== -->
+    <text x="225" y="232" text-anchor="middle" font-family="'Montserrat',Arial,sans-serif" font-size="54" fill="white" font-weight="900" letter-spacing="-1">We finished</text>
+    <text x="225" y="292" text-anchor="middle" font-family="'Montserrat',Arial,sans-serif" font-size="54" fill="white" font-weight="900" letter-spacing="-1">your lawn.</text>
+
+    <!-- ===== SUB COPY ===== -->
+    <text x="225" y="345" text-anchor="middle" font-family="'Montserrat',Arial,sans-serif" font-size="18" fill="rgba(255,255,255,0.82)" font-weight="600">See a spot we missed?</text>
+    <text x="225" y="380" text-anchor="middle" font-family="'Montserrat',Arial,sans-serif" font-size="13.5" fill="rgba(255,255,255,0.48)" font-weight="600">Text a photo of any missed areas to:</text>
+
+    <!-- ===== PHONE NUMBER ===== -->
+    <text x="225" y="428" text-anchor="middle" font-family="'Montserrat',Arial,sans-serif" font-size="38" fill="#B0FF03" font-weight="900" filter="url(#greenGlow)">(803) 902-7447</text>
+
+    <!-- ===== GUARANTEE ===== -->
+    <text x="225" y="468" text-anchor="middle" font-family="'Montserrat',Arial,sans-serif" font-size="16" fill="white" font-weight="700">We'll fix it fast.</text>
+    <text x="225" y="490" text-anchor="middle" font-family="'Montserrat',Arial,sans-serif" font-size="12.5" fill="rgba(255,255,255,0.4)" font-weight="600" font-style="italic">(Hey Jude Guarantee)</text>
+
+    <!-- ===== DIVIDER ===== -->
+    <line x1="55" y1="520" x2="395" y2="520" stroke="rgba(255,255,255,0.10)" stroke-width="1"/>
+
+    <!-- ===== REFER SECTION ===== -->
+    <text x="225" y="570" text-anchor="middle" font-family="'Montserrat',Arial,sans-serif" font-size="32" fill="white" font-weight="900">Refer a Neighbor.</text>
+    <text x="225" y="608" text-anchor="middle" font-family="'Montserrat',Arial,sans-serif" font-size="21" fill="white" font-weight="700">Earn a <tspan fill="#B0FF03" font-weight="900">$25</tspan></text>
+    <text x="225" y="636" text-anchor="middle" font-family="'Montserrat',Arial,sans-serif" font-size="21" fill="white" font-weight="700">Thank-You</text>
+    <text x="225" y="664" text-anchor="middle" font-family="'Montserrat',Arial,sans-serif" font-size="21" fill="white" font-weight="700">Credit.</text>
+
+    <!-- ===== PHONE MOCKUP ===== -->
+    <!-- Phone outer body -->
+    <rect x="152" y="695" width="146" height="270" rx="20" ry="20" fill="#181818" stroke="rgba(255,255,255,0.13)" stroke-width="1.5"/>
+    <!-- Screen -->
+    <rect x="160" y="714" width="130" height="232" rx="6" ry="6" fill="#0e0e0e"/>
+    <!-- Notch/dynamic island -->
+    <rect x="200" y="700" width="50" height="6" rx="3" ry="3" fill="#2a2a2a"/>
+
+    <!-- Screen content -->
+    <!-- Top bar with green tint -->
+    <rect x="164" y="720" width="122" height="50" rx="3" ry="3" fill="#0a1500"/>
+    <!-- Mini logo -->
+    <text x="225" y="740" text-anchor="middle" font-family="'Brush Script MT','Segoe Script',cursive" font-size="13" fill="white" font-style="italic">Hey Jude's</text>
+    <text x="225" y="752" text-anchor="middle" font-family="'Montserrat',Arial,sans-serif" font-size="4.5" fill="white" font-weight="900" letter-spacing="1.5">LAWN CARE</text>
+    <!-- Small green line -->
+    <line x1="203" y1="757" x2="247" y2="757" stroke="#B0FF03" stroke-width="0.5" opacity="0.5"/>
+
+    <!-- URL pill on screen -->
+    <rect x="172" y="778" width="106" height="20" rx="4" ry="4" fill="rgba(176,255,3,0.08)" stroke="rgba(176,255,3,0.25)" stroke-width="0.5"/>
+    <text x="225" y="790" text-anchor="middle" font-family="'Montserrat',Arial,sans-serif" font-size="6.5" fill="#B0FF03" font-weight="700">HeyJudesLawnCare.com/refer</text>
+
+    <!-- Form fields on screen -->
+    <rect x="172" y="806" width="106" height="13" rx="2.5" ry="2.5" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.07)" stroke-width="0.5"/>
+    <text x="177" y="815" font-family="'Montserrat',Arial,sans-serif" font-size="4.5" fill="rgba(255,255,255,0.25)" font-weight="600">Your Name</text>
+
+    <rect x="172" y="824" width="106" height="13" rx="2.5" ry="2.5" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.07)" stroke-width="0.5"/>
+    <text x="177" y="833" font-family="'Montserrat',Arial,sans-serif" font-size="4.5" fill="rgba(255,255,255,0.25)" font-weight="600">Your Address</text>
+
+    <rect x="172" y="842" width="106" height="13" rx="2.5" ry="2.5" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.07)" stroke-width="0.5"/>
+    <text x="177" y="851" font-family="'Montserrat',Arial,sans-serif" font-size="4.5" fill="rgba(255,255,255,0.25)" font-weight="600">Your Phone</text>
+
+    <rect x="172" y="860" width="106" height="13" rx="2.5" ry="2.5" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.07)" stroke-width="0.5"/>
+    <text x="177" y="869" font-family="'Montserrat',Arial,sans-serif" font-size="4.5" fill="rgba(255,255,255,0.25)" font-weight="600">Choose a service</text>
+
+    <!-- Submit button on screen -->
+    <rect x="172" y="882" width="106" height="18" rx="5" ry="5" fill="#B0FF03"/>
+    <text x="225" y="894" text-anchor="middle" font-family="'Montserrat',Arial,sans-serif" font-size="7" fill="#000" font-weight="800">Request a Quote</text>
+
+    <!-- Home indicator bar -->
+    <rect x="200" y="934" width="50" height="4" rx="2" ry="2" fill="rgba(255,255,255,0.2)"/>
+
+    <!-- ===== TEXT THEM LINE ===== -->
+    <text x="225" y="992" text-anchor="middle" font-family="'Montserrat',Arial,sans-serif" font-size="14" fill="rgba(255,255,255,0.55)" font-weight="600">Text them:</text>
+
+    <!-- URL Badge -->
+    <rect x="90" y="1004" width="270" height="38" rx="12" ry="12" fill="rgba(176,255,3,0.07)" stroke="rgba(176,255,3,0.22)" stroke-width="1"/>
+    <text x="225" y="1029" text-anchor="middle" font-family="'Montserrat',Arial,sans-serif" font-size="15.5" fill="#B0FF03" font-weight="800">HeyJudesLawnCare.com/refer</text>
+
+    <!-- ===== DISCLAIMER ===== -->
+    <text x="225" y="1065" text-anchor="middle" font-family="'Montserrat',Arial,sans-serif" font-size="7.5" fill="rgba(255,255,255,0.22)" font-weight="500">*Credit applies on account after first paid mow/service appointment.</text>
+    <text x="225" y="1077" text-anchor="middle" font-family="'Montserrat',Arial,sans-serif" font-size="7.5" fill="rgba(255,255,255,0.22)" font-weight="500">See full terms at heyjudeslawncare.com.</text>
+
+    <!-- Outer border -->
+    <rect x="0" y="0" width="450" height="1100" rx="22" ry="22" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  </g>
+</svg>

@@ -25,22 +25,27 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LawnAndGardenService",
+  "@type": ["LawnAndGardenService", "LocalBusiness"],
   "name": "Hey Jude's Lawn Care",
   "description": "Professional lawn care and landscaping in Rock Hill, SC. Mowing, cleanups, mulch, pine needles, bed edging, and more.",
   "url": "https://heyjudeslawncare.com/",
+  "image": "https://assets.cdn.filesafe.space/Umlo2UnfqbijiGqNU6g2/media/6990a89bc086658638d69137.png",
   "telephone": "+1-803-902-7447",
-  "areaServed": [
-    { "@type": "City", "name": "Rock Hill", "addressRegion": "SC" },
-    { "@type": "City", "name": "Fort Mill", "addressRegion": "SC" },
-    { "@type": "City", "name": "Tega Cay", "addressRegion": "SC" },
-    { "@type": "City", "name": "Lake Wylie", "addressRegion": "SC" }
-  ],
+  "areaServed": {
+    "@type": "City",
+    "name": "Rock Hill",
+    "addressRegion": "SC"
+  },
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Rock Hill",
     "addressRegion": "SC",
     "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 34.9249,
+    "longitude": -81.0251
   },
   "priceRange": "$$",
   "aggregateRating": {
@@ -68,12 +73,19 @@
   "mainEntity": [
     { "@type": "Question", "name": "How fast can I get a quote?", "acceptedAnswer": { "@type": "Answer", "text": "Usually same-day or within 24 hours." } },
     { "@type": "Question", "name": "Do you require a contract?", "acceptedAnswer": { "@type": "Answer", "text": "No contracts. We earn your business each visit." } },
-    { "@type": "Question", "name": "What areas do you serve?", "acceptedAnswer": { "@type": "Answer", "text": "Rock Hill and nearby areas including Fort Mill, Tega Cay, and Lake Wylie." } },
+    { "@type": "Question", "name": "What areas do you serve for lawn care in Rock Hill?", "acceptedAnswer": { "@type": "Answer", "text": "We serve Rock Hill, SC and nearby communities including India Hook, Newport, Riverwalk, and Ebenezer." } },
+    { "@type": "Question", "name": "What makes Hey Jude's the best choice for lawn care and landscaping in Rock Hill?", "acceptedAnswer": { "@type": "Answer", "text": "130+ five-star Google reviews, clear communication, no contracts, and consistent results every visit. Locally owned, licensed, and insured." } },
+    { "@type": "Question", "name": "What services do you offer?", "acceptedAnswer": { "@type": "Answer", "text": "Lawn mowing, yard cleanups, mulch installation, pine needles, bed edging, bush trimming, and full landscape refreshes throughout Rock Hill, SC." } },
+    { "@type": "Question", "name": "What's included with your lawn mowing service in Rock Hill?", "acceptedAnswer": { "@type": "Answer", "text": "Every mowing visit includes a clean cut, crisp edges, trimming where needed, and a tidy blow-off on all hard surfaces. Weekly and biweekly plans available." } },
     { "@type": "Question", "name": "Are you licensed and insured?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Licensed and insured." } }
   ]
 }
 </script>
 
+<link rel="preload" as="image" href="https://assets.cdn.filesafe.space/Umlo2UnfqbijiGqNU6g2/media/6990a89bc086658638d69137.png" />
+<link rel="icon" href="https://assets.cdn.filesafe.space/bRS1s3JdSXOueVGeFYkf/media/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
 <style>
   *{ box-sizing:border-box; }
@@ -249,7 +261,7 @@
   .hj-hero-tagline{
     margin:0 0 32px;
     font-weight:800;
-    font-size: clamp(16px, 3vw, 22px);
+    font-size: clamp(20px, 3.5vw, 28px);
     color: var(--hj-green);
     font-style:italic;
   }
@@ -878,7 +890,7 @@
     .hj-hero{ min-height:85vh; }
   }
   @media (max-width: 768px){
-    .hj-navbar-links, .hj-nav-phone{ display:none; }
+    .hj-navbar-links{ display:none; }
     .hj-nav-toggle{ display:flex; }
     .hj-navbar-links.is-open{
       display:flex;
@@ -898,7 +910,7 @@
       padding:14px 0;
       border-bottom:1px solid rgba(255,255,255,.06);
     }
-    .hj-nav-cta{ display:none; }
+    .hj-nav-cta{ }
     .hj-nav-dropdown{ position:relative; }
     .hj-nav-dd-menu{
       position:static !important;
@@ -1164,6 +1176,76 @@
     .hj-grid-2f{ grid-template-columns:1fr; }
     .hj-hero-text h1{ font-size:clamp(36px, 10vw, 52px); }
   }
+
+  /* ===== FOOTER ===== */
+  .hj-footer{
+    background: var(--hj-black);
+    border-top: 1px solid rgba(255,255,255,.08);
+    padding: 44px 0 28px;
+    color: rgba(255,255,255,.65);
+    font-size: 13.5px;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+  .hj-footer a{ text-decoration:none; color:rgba(255,255,255,.65); transition: color .18s ease; }
+  .hj-footer a:hover{ color:#fff; }
+  .hj-footer-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+  }
+  .hj-footer-logo{
+    height: 40px;
+    width: auto;
+    display: block;
+    margin-bottom: 10px;
+  }
+  .hj-footer-tagline{
+    margin: 0;
+    color: var(--hj-green);
+    font-weight: 800;
+    font-size: 13px;
+    font-style: italic;
+  }
+  .hj-footer-info{
+    display: flex;
+    gap: 40px;
+  }
+  .hj-footer-block p{ margin: 0; }
+  .hj-footer-heading{
+    font-weight: 900;
+    color: rgba(255,255,255,.88);
+    font-size: 14px;
+    margin-bottom: 8px;
+    letter-spacing: .2px;
+  }
+  .hj-footer-phone{
+    font-weight: 800;
+    font-size: 15px;
+    color: rgba(255,255,255,.85) !important;
+  }
+  .hj-footer-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    font-size: 12.5px;
+    color: rgba(255,255,255,.45);
+  }
+  .hj-footer-bottom p{ margin: 0; }
+  .hj-footer-links{
+    display: flex;
+    gap: 20px;
+  }
+  .hj-footer-links a{ color: rgba(255,255,255,.45); font-size: 12.5px; }
+  .hj-footer-links a:hover{ color: rgba(255,255,255,.75); }
+  @media (max-width: 600px){
+    .hj-footer-grid{ grid-template-columns: 1fr; gap: 24px; }
+    .hj-footer-info{ flex-direction: column; gap: 20px; }
+    .hj-footer-bottom{ flex-direction: column; gap: 12px; text-align: center; }
+  }
 </style>
 </head>
 <body>
@@ -1173,17 +1255,17 @@
   <div class="wrap">
     <div class="hj-navbar-inner">
       <a class="hj-navbar-logo" href="/" aria-label="Hey Jude's Lawn Care home">
-        <img src="https://assets.cdn.filesafe.space/Umlo2UnfqbijiGqNU6g2/media/699087250084985e836cdab6.png" alt="Hey Jude's Lawn Care" />
+        <img src="https://assets.cdn.filesafe.space/Umlo2UnfqbijiGqNU6g2/media/699087250084985e836cdab6.png" alt="Hey Jude's Lawn Care" width="160" height="52" />
       </a>
 
-      <button class="hj-nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.hj-navbar-links').classList.toggle('is-open')">
+      <button class="hj-nav-toggle" aria-label="Toggle menu" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false'?'true':'false');document.querySelector('.hj-navbar-links').classList.toggle('is-open')">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
       </button>
 
       <div class="hj-navbar-links">
         <a href="#top">Home</a>
         <div class="hj-nav-dropdown">
-          <a href="/services">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></a>
+          <a href="#" onclick="return false">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></a>
           <div class="hj-nav-dd-menu">
             <a href="/lawn-mowing">Lawn Mowing</a>
             <a href="/mulch-installation">Mulch Installation</a>
@@ -1214,15 +1296,31 @@
       menu.classList.toggle('is-open');
     }
   });
+
+  // Close mobile menu when clicking any link except the Services toggle
+  var navLinks = document.querySelector('.hj-navbar-links');
+  if(navLinks){
+    navLinks.querySelectorAll('a').forEach(function(link){
+      if(link === toggle) return; // skip the Services dropdown toggle
+      link.addEventListener('click', function(){
+        if(window.innerWidth <= 768){
+          navLinks.classList.remove('is-open');
+          dd.classList.remove('is-open');
+          menu.classList.remove('is-open');
+        }
+      });
+    });
+  }
 })();
 </script>
 
+<main>
 <!-- ==================== HERO (full viewport) ==================== -->
 <header class="hj-hero">
   <div class="wrap">
     <div class="hj-hero-content">
       <div class="hj-hero-text">
-        <p class="hj-hero-tagline">Done Right The First Time.</p>
+        <p class="hj-hero-tagline">Raise The Standard.</p>
         <h1>Rock Hill<br>Lawn Care &amp;<br>Landscaping</h1>
         <div class="hj-hero-badge">
           <span class="hj-hero-badge-dot" aria-hidden="true"></span>
@@ -1237,7 +1335,7 @@
 <!-- ==================== QUOTE FORM SECTION ==================== -->
 <section class="hj-form-section" id="quote-section">
   <div class="wrap">
-    <h2 class="hj-form-section-heading">Get a FREE Quote in Under 24h</h2>
+    <h2 class="hj-form-section-heading">FREE Quotes</h2>
     <aside class="hj-quote-card" id="quote" aria-label="Quick quote form">
       <div class="hj-quote-top">
         <p class="hj-quote-title">Get your free quote</p>
@@ -1283,20 +1381,20 @@
           </div>
           <div class="hj-field">
             <label class="hj-label" for="hp-street">Street address</label>
-            <input class="hj-input" id="hp-street" name="street" placeholder="—" />
+            <input class="hj-input" id="hp-street" name="street" placeholder="&mdash;" />
           </div>
           <div style="display:grid; grid-template-columns:1fr .6fr .5fr; gap:10px;">
             <div class="hj-field">
               <label class="hj-label" for="hp-city">City</label>
-              <input class="hj-input" id="hp-city" name="city" placeholder="—" />
+              <input class="hj-input" id="hp-city" name="city" placeholder="&mdash;" />
             </div>
             <div class="hj-field">
               <label class="hj-label" for="hp-state">State</label>
-              <input class="hj-input" id="hp-state" name="state" placeholder="—" />
+              <input class="hj-input" id="hp-state" name="state" placeholder="&mdash;" />
             </div>
             <div class="hj-field">
               <label class="hj-label" for="hp-zip">Zip</label>
-              <input class="hj-input" id="hp-zip" name="zip" placeholder="—" />
+              <input class="hj-input" id="hp-zip" name="zip" placeholder="&mdash;" />
             </div>
           </div>
         </div>
@@ -1395,6 +1493,11 @@
       </article>
     </div>
 
+    <div style="width:100vw;margin-left:calc(-50vw + 50%);margin-top:32px;padding:0 16px;">
+      <script type='text/javascript' src='https://api.heyjudeslawncare.com/reputation/assets/review-widget.js' async></script>
+      <iframe class='lc_reviews_widget' src='https://api.heyjudeslawncare.com/reputation/widgets/review_widget/Umlo2UnfqbijiGqNU6g2?widgetId=699d1eb91d05104504bf600d' frameborder='0' scrolling='no' style='min-width:100%;width:100%;' title="Customer reviews widget"></iframe>
+    </div>
+
     <a class="hj-reviews-cta" href="https://www.google.com/search?q=Hey+Jude%27s+Lawn+Care+reviews" target="_blank" rel="noopener">Read More Reviews</a>
   </div>
 </section>
@@ -1402,10 +1505,14 @@
 <!-- ==================== ABOUT / SEO CONTENT ==================== -->
 <section class="hj-about" aria-label="About Hey Jude's Lawn Care">
   <div class="hj-about-inner">
-    <h2 class="hj-about-title">Lawn Care in Rock Hill, SC — Done Right</h2>
-    <p>Hey Jude's Lawn Care provides professional lawn care and landscaping services throughout Rock Hill, SC. Whether you need weekly mowing, a one-time yard cleanup, or a full landscaping refresh with mulch, pine needles, or bed edging — we handle it with consistent quality and clear communication.</p>
-    <p>We're a local, licensed and insured team with 130+ five-star Google reviews from Rock Hill homeowners. No contracts, no pressure — just reliable service and a yard that looks right every time.</p>
-    <p>If you've been searching for lawn care in Rock Hill that actually shows up, communicates clearly, and leaves your property looking finished — that's what we built this company to do.</p>
+    <h2 class="hj-about-title">Sharp Curb Appeal. Zero Stress.</h2>
+    <p style="font-size:clamp(16px,2.2vw,20px);color:rgba(255,255,255,.7);margin-top:-8px;margin-bottom:24px;font-weight:600;">Lawn Care &amp; Landscaping in Rock Hill, SC</p>
+    <p>Your yard should look sharp.<br>And it should feel handled.</p>
+    <p>At Hey Jude&rsquo;s Lawn Care, we maintain and elevate properties throughout Rock Hill with clean finishes, crisp edges, and consistent, professional service.</p>
+    <p>From weekly lawn maintenance and mowing to full landscape upgrades with mulch, pine needles, and bed edging, we take ownership of the details so you don&rsquo;t have to.</p>
+    <p>We&rsquo;re local. Licensed. Insured.<br>Backed by 130+ five-star reviews from Rock Hill homeowners.</p>
+    <p>No contracts. No chasing. No loose ends.</p>
+    <p>Just a yard that looks intentional &mdash; and a process that feels effortless.</p>
   </div>
 </section>
 
@@ -1429,33 +1536,33 @@
         </div>
       </a>
 
-      <div class="hj-goal-card coming-soon" aria-label="Yard Cleanup — page coming soon">
+      <div class="hj-goal-card coming-soon" aria-label="Yard Cleanup &mdash; page coming soon">
         <div class="hj-goal-photo" style="background-image:url('https://assets.cdn.filesafe.space/Umlo2UnfqbijiGqNU6g2/media/69279652fbd34412332c0b9a.png');">
           <div class="hj-coming-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Page Coming Soon</div>
         </div>
         <div class="hj-goal-body">
           <div class="hj-goal-head">Yard Cleanup</div>
-          <div class="hj-goal-desc">For overgrowth, leaves, debris, and "it got away from us." We offer this service — dedicated page is on the way.</div>
+          <div class="hj-goal-desc">For overgrowth, leaves, debris, and "it got away from us." We offer this service &mdash; dedicated page is on the way.</div>
           <ul class="hj-goal-bullets">
             <li>Leaves, debris, and overgrowth handled</li>
             <li>Haul away and leave it clean</li>
           </ul>
-          <div class="hj-goal-cta">We Offer This — Page Coming Soon</div>
+          <div class="hj-goal-cta">We Offer This &mdash; Page Coming Soon</div>
         </div>
       </div>
 
-      <div class="hj-goal-card coming-soon" aria-label="Landscaping — page coming soon">
+      <div class="hj-goal-card coming-soon" aria-label="Landscaping &mdash; page coming soon">
         <div class="hj-goal-photo" style="background-image:url('https://assets.cdn.filesafe.space/Umlo2UnfqbijiGqNU6g2/media/699139bd36a392bb335e0be5.png');">
           <div class="hj-coming-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Page Coming Soon</div>
         </div>
         <div class="hj-goal-body">
           <div class="hj-goal-head">Landscaping & Bed Refresh</div>
-          <div class="hj-goal-desc">Mulch, pine needles, bed edging, rocks, or trims that make it look expensive. We offer this service — dedicated page is on the way.</div>
+          <div class="hj-goal-desc">Mulch, pine needles, bed edging, rocks, or trims that make it look expensive. We offer this service &mdash; dedicated page is on the way.</div>
           <ul class="hj-goal-bullets">
             <li>Mulch, pine needles, rock install</li>
             <li>Bed edging, trimming, and refresh</li>
           </ul>
-          <div class="hj-goal-cta">We Offer This — Page Coming Soon</div>
+          <div class="hj-goal-cta">We Offer This &mdash; Page Coming Soon</div>
         </div>
       </div>
     </div>
@@ -1473,7 +1580,7 @@
           <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M9.0 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
         </div>
         <div class="hj-why-text">
-          <div class="hj-why-title">We show up — and we do it right</div>
+          <div class="hj-why-title">Sharp work. Every time.</div>
           <div class="hj-why-sub">Clean beds. Sharp edges. No mess left behind.</div>
         </div>
       </div>
@@ -1539,21 +1646,10 @@
       <div class="hj-step__num" aria-hidden="true">3</div>
       <div class="hj-step__text">
         <div class="hj-step__headline">Approve and get scheduled</div>
-        <div class="hj-step__desc">You'll receive your quote — approve it and we'll get you on the schedule.</div>
+        <div class="hj-step__desc">You'll receive your quote &mdash; approve it and we'll get you on the schedule.</div>
       </div>
       <div class="hj-step__icon" aria-hidden="true">
         <svg viewBox="0 0 64 64"><path d="M12 32l12 12 28-28" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="32" cy="32" r="28" fill="none" stroke="currentColor" stroke-width="3" opacity=".85"/></svg>
-      </div>
-    </div>
-
-    <div class="hj-step hj-reveal">
-      <div class="hj-step__num" aria-hidden="true">4</div>
-      <div class="hj-step__text">
-        <div class="hj-step__headline">We make it look right</div>
-        <div class="hj-step__desc">Clean finish, consistent results.</div>
-      </div>
-      <div class="hj-step__icon" aria-hidden="true">
-        <svg viewBox="0 0 64 64"><path d="M18 44h20a10 10 0 0 0 10-10v-6H34" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M34 28V18a6 6 0 0 0-6-6H18" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><circle cx="18" cy="48" r="6" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="44" cy="48" r="6" fill="none" stroke="currentColor" stroke-width="3"/><path d="M10 44h44" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity=".7"/><path d="M22 18h10" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity=".85"/></svg>
       </div>
     </div>
 
@@ -1579,8 +1675,8 @@
         <div class="hj-faq-body">Nope. No contracts. We earn your business each visit.</div>
       </details>
       <details class="hj-faq-item">
-        <summary><span>What areas do you serve?</span><span class="hj-faq-plus" aria-hidden="true"></span></summary>
-        <div class="hj-faq-body">Rock Hill and nearby areas. If you're close, submit the form and we'll confirm coverage fast.</div>
+        <summary><span>What areas do you serve for lawn care in Rock Hill?</span><span class="hj-faq-plus" aria-hidden="true"></span></summary>
+        <div class="hj-faq-body">We serve Rock Hill, SC and nearby communities including India Hook, Newport, Riverwalk, and Ebenezer. Submit the form and we'll confirm coverage fast.</div>
       </details>
       <details class="hj-faq-item">
         <summary><span>What if weather delays service?</span><span class="hj-faq-plus" aria-hidden="true"></span></summary>
@@ -1591,8 +1687,16 @@
         <div class="hj-faq-body">Yes, when the job calls for it. Your quote will clearly say what's included.</div>
       </details>
       <details class="hj-faq-item">
-        <summary><span>What's included with mowing service?</span><span class="hj-faq-plus" aria-hidden="true"></span></summary>
-        <div class="hj-faq-body">A clean cut + crisp edges, trimming where needed, and a tidy blow-off on hard surfaces.</div>
+        <summary><span>What's included with your lawn mowing service in Rock Hill?</span><span class="hj-faq-plus" aria-hidden="true"></span></summary>
+        <div class="hj-faq-body">Every mowing visit includes a clean cut, crisp edges, trimming where needed, and a tidy blow-off on all hard surfaces. Weekly and biweekly plans available.</div>
+      </details>
+      <details class="hj-faq-item">
+        <summary><span>What makes Hey Jude's the best choice for lawn care and landscaping in Rock Hill?</span><span class="hj-faq-plus" aria-hidden="true"></span></summary>
+        <div class="hj-faq-body">130+ five-star Google reviews, clear communication, no contracts, and consistent results every visit. We're locally owned, licensed, and insured.</div>
+      </details>
+      <details class="hj-faq-item">
+        <summary><span>What services do you offer?</span><span class="hj-faq-plus" aria-hidden="true"></span></summary>
+        <div class="hj-faq-body">Lawn mowing, yard cleanups, mulch installation, pine needles, bed edging, bush trimming, and full landscape refreshes throughout Rock Hill, SC.</div>
       </details>
       <details class="hj-faq-item">
         <summary><span>Are you licensed and insured?</span><span class="hj-faq-plus" aria-hidden="true"></span></summary>
@@ -1610,7 +1714,7 @@
     </div>
 
     <div class="hj-faq-cta">
-      <a class="hj-faq-btn" href="#row-yyZ8oK0v16" aria-label="Get a free quote">Get Your Free Quote</a>
+      <a class="hj-faq-btn" href="javascript:void(0)" aria-label="Get a free quote" onclick="var s=document.getElementById('quote-section');if(s)s.scrollIntoView({behavior:'smooth'});">Get Your Free Quote</a>
       <p class="hj-faq-micro">Fast response. Clear pricing. No pressure.</p>
     </div>
   </div>
@@ -1624,15 +1728,15 @@
 
     <div class="hj-gallery-grid">
       <div class="hj-gallery-item">
-        <img src="https://assets.cdn.filesafe.space/Umlo2UnfqbijiGqNU6g2/media/699139f1c086655da4014c81.png" alt="Clean mowing lines on a Rock Hill lawn" loading="lazy" />
+        <img src="https://assets.cdn.filesafe.space/Umlo2UnfqbijiGqNU6g2/media/699139f1c086655da4014c81.png" alt="Clean mowing lines on a Rock Hill lawn" loading="lazy" width="400" height="300" />
         <div class="hj-gallery-label">Weekly Mowing</div>
       </div>
       <div class="hj-gallery-item">
-        <img src="https://assets.cdn.filesafe.space/Umlo2UnfqbijiGqNU6g2/media/69279652fbd34412332c0b9a.png" alt="Yard cleanup before and after" loading="lazy" />
+        <img src="https://assets.cdn.filesafe.space/Umlo2UnfqbijiGqNU6g2/media/69279652fbd34412332c0b9a.png" alt="Yard cleanup before and after" loading="lazy" width="400" height="300" />
         <div class="hj-gallery-label">Yard Cleanup</div>
       </div>
       <div class="hj-gallery-item">
-        <img src="https://assets.cdn.filesafe.space/Umlo2UnfqbijiGqNU6g2/media/699139bd36a392bb335e0be5.png" alt="Fresh mulch and edged beds" loading="lazy" />
+        <img src="https://assets.cdn.filesafe.space/Umlo2UnfqbijiGqNU6g2/media/699139bd36a392bb335e0be5.png" alt="Fresh mulch and edged beds" loading="lazy" width="400" height="300" />
         <div class="hj-gallery-label">Landscaping</div>
       </div>
     </div>
@@ -1655,6 +1759,10 @@
       <span class="hj-chip">Laurel Creek</span>
       <span class="hj-chip">Meadow Lakes</span>
     </div>
+
+    <div style="margin-top:28px;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.1);">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d104630.26584809758!2d-81.09!3d34.9249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8856f7675a25d825%3A0x9c5e3e56fdf4a2c5!2sRock%20Hill%2C%20SC!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" width="100%" height="300" style="border:0;display:block;filter:invert(90%) hue-rotate(180deg);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Google Maps showing Rock Hill, SC service area"></iframe>
+    </div>
   </div>
 </section>
 
@@ -1670,21 +1778,23 @@
   </div>
 </section>
 
+</main>
+
 <!-- ==================== FOOTER ==================== -->
 <footer class="hj-footer">
   <div class="wrap">
     <div class="hj-footer-grid">
       <div class="hj-footer-brand">
         <a href="/" aria-label="Hey Jude's Lawn Care home">
-          <img src="https://assets.cdn.filesafe.space/Umlo2UnfqbijiGqNU6g2/media/699087250084985e836cdab6.png" alt="Hey Jude's Lawn Care" class="hj-footer-logo" />
+          <img src="https://assets.cdn.filesafe.space/Umlo2UnfqbijiGqNU6g2/media/699087250084985e836cdab6.png" alt="Hey Jude's Lawn Care" class="hj-footer-logo" width="160" height="40" />
         </a>
-        <p class="hj-footer-tagline">Done Right The First Time.</p>
+        <p class="hj-footer-tagline">Raise The Standard.</p>
       </div>
 
       <div class="hj-footer-info">
         <div class="hj-footer-block">
           <div class="hj-footer-heading">Hours</div>
-          <p>Monday – Saturday: 9:00 AM – 6:00 PM</p>
+          <p>Monday &ndash; Saturday: 9:00 AM &ndash; 6:00 PM</p>
           <p>Sunday: Closed</p>
         </div>
         <div class="hj-footer-block">
@@ -1703,77 +1813,6 @@
     </div>
   </div>
 </footer>
-
-<style>
-  .hj-footer{
-    background: var(--hj-black);
-    border-top: 1px solid rgba(255,255,255,.08);
-    padding: 44px 0 28px;
-    color: rgba(255,255,255,.65);
-    font-size: 13.5px;
-    font-weight: 700;
-    line-height: 1.5;
-  }
-  .hj-footer a{ text-decoration:none; color:rgba(255,255,255,.65); transition: color .18s ease; }
-  .hj-footer a:hover{ color:#fff; }
-  .hj-footer-grid{
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 32px;
-    padding-bottom: 28px;
-    border-bottom: 1px solid rgba(255,255,255,.08);
-  }
-  .hj-footer-logo{
-    height: 40px;
-    width: auto;
-    display: block;
-    margin-bottom: 10px;
-  }
-  .hj-footer-tagline{
-    margin: 0;
-    color: var(--hj-green);
-    font-weight: 800;
-    font-size: 13px;
-    font-style: italic;
-  }
-  .hj-footer-info{
-    display: flex;
-    gap: 40px;
-  }
-  .hj-footer-block p{ margin: 0; }
-  .hj-footer-heading{
-    font-weight: 900;
-    color: rgba(255,255,255,.88);
-    font-size: 14px;
-    margin-bottom: 8px;
-    letter-spacing: .2px;
-  }
-  .hj-footer-phone{
-    font-weight: 800;
-    font-size: 15px;
-    color: rgba(255,255,255,.85) !important;
-  }
-  .hj-footer-bottom{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 20px;
-    font-size: 12.5px;
-    color: rgba(255,255,255,.45);
-  }
-  .hj-footer-bottom p{ margin: 0; }
-  .hj-footer-links{
-    display: flex;
-    gap: 20px;
-  }
-  .hj-footer-links a{ color: rgba(255,255,255,.45); font-size: 12.5px; }
-  .hj-footer-links a:hover{ color: rgba(255,255,255,.75); }
-  @media (max-width: 600px){
-    .hj-footer-grid{ grid-template-columns: 1fr; gap: 24px; }
-    .hj-footer-info{ flex-direction: column; gap: 20px; }
-    .hj-footer-bottom{ flex-direction: column; gap: 12px; text-align: center; }
-  }
-</style>
 
 <!-- ==================== SCRIPTS ==================== -->
 <script>

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 
   <title>Mulch Installation in Rock Hill, SC | Hey Jude's Lawn Care</title>
-  <meta name="description" content="Professional mulch installation in Rock Hill, SC. Proper bed prep, clean edges, even coverage at the right depth. Brown, black, red, cedar, and double ground options. Get a fast, free quote." />
+  <meta name="description" content="Professional mulch installation in Rock Hill, SC. Proper bed prep, clean edges, even coverage. Brown, black, red, and cedar options. Free quote." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="canonical" href="https://heyjudeslawncare.com/mulch-installation" />
 
@@ -27,17 +27,16 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LawnAndGardenService",
+    "@type": ["LawnAndGardenService", "LocalBusiness"],
     "name": "Hey Jude's Lawn Care",
     "description": "Professional mulch installation in Rock Hill, SC. Proper bed prep, clean edges, even coverage, and a finished look that lasts.",
     "url": "https://heyjudeslawncare.com/mulch-installation",
     "telephone": "+1-803-902-7447",
-    "areaServed": [
-      { "@type": "City", "name": "Rock Hill", "addressRegion": "SC" },
-      { "@type": "City", "name": "Fort Mill", "addressRegion": "SC" },
-      { "@type": "City", "name": "Tega Cay", "addressRegion": "SC" },
-      { "@type": "City", "name": "Lake Wylie", "addressRegion": "SC" }
-    ],
+    "areaServed": {
+      "@type": "City",
+      "name": "Rock Hill",
+      "addressRegion": "SC"
+    },
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Rock Hill",
@@ -118,11 +117,21 @@
           "@type": "Answer",
           "text": "Yes. We coordinate material selection and sourcing so your installation is handled from start to finish without you needing to arrange delivery separately."
         }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you install landscape fabric under the mulch?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We recommend against it, but we can install it if you request it. We could sell it as an add-on, but we'd rather be honest about what actually works for your landscape. Mulch is meant to break down into the soil over time and improve it. Fabric blocks that. Weeds still come through anyway because decomposed mulch builds up on top of the fabric and they root right into it. Now you've got a useless layer trapped underneath that's blocking nutrients and water from your soil, and if you ever want it out, you have to remove all the mulch just to get to it. Proper mulch depth handles weed suppression on its own."
+        }
       }
     ]
   }
   </script>
 
+  <link rel="icon" href="/favicon.ico">
+  <link rel="preload" as="image" href="https://storage.googleapis.com/msgsndr/Umlo2UnfqbijiGqNU6g2/media/699328fda9efde207da43d9b.png">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet" />
@@ -314,7 +323,7 @@
       color: var(--hj-green); background:rgba(176,255,3,.12); padding:2px 6px; border-radius:6px;
     }
     @media (max-width: 768px){
-      .hj-navbar-links, .hj-nav-phone{ display:none; }
+      .hj-navbar-links{ display:none; }
       .hj-nav-toggle{ display:flex; }
       .hj-navbar-links.is-open{
         display:flex;
@@ -562,17 +571,7 @@
       margin-bottom: 14px;
       position: relative;
     }
-    .section-head::before{
-      content:"";
-      position:absolute;
-      left:-22px;
-      right:-22px;
-      top:-18px;
-      height: 80px;
-      background: radial-gradient(circle at 50% 62%, rgba(176,255,3,.10), rgba(176,255,3,0) 70%);
-      pointer-events:none;
-      opacity:.75;
-    }
+    .section-head::before{ display:none; }
     .section h2{
       position: relative;
       margin: 0 0 10px;
@@ -1098,6 +1097,20 @@
       font-size: 12.5px;
     }
 
+    /* ===== Form section heading ===== */
+    .hj-form-section-heading{
+      margin:0 0 22px;
+      font-weight:900;
+      font-size:clamp(24px, 5.4vw, 34px);
+      line-height:1.1;
+      letter-spacing:-.3px;
+      color:#fff;
+      text-align:center;
+    }
+    #quote-section{
+      scroll-margin-top: 120px;
+    }
+
     /* ===== Mobile ===== */
     .hero-cta-mobile{ display:none; }
     .hero-form-desktop{ display:block; }
@@ -1136,6 +1149,24 @@
       .hj-badge{ font-size: 11.5px; }
       .hero-lede{ font-size: 15.5px; }
     }
+
+    /* ===== Footer ===== */
+    .hj-footer{ background:var(--hj-black,#000); border-top:1px solid rgba(255,255,255,.08); padding:44px 0 28px; color:rgba(255,255,255,.65); font-size:13.5px; font-weight:700; line-height:1.5; width:100vw; margin-left:calc(-50vw + 50%); }
+    .hj-footer a{ text-decoration:none; color:rgba(255,255,255,.65); transition:color .18s ease; }
+    .hj-footer a:hover{ color:#fff; }
+    .hj-footer-grid{ display:grid; grid-template-columns:1fr 1fr; gap:32px; padding-bottom:28px; border-bottom:1px solid rgba(255,255,255,.08); }
+    .hj-footer-logo{ height:40px; width:auto; display:block; margin-bottom:10px; }
+    .hj-footer-tagline{ margin:0; color:var(--hj-green,#B0FF03); font-weight:800; font-size:13px; font-style:italic; }
+    .hj-footer-info{ display:flex; gap:40px; }
+    .hj-footer-block p{ margin:0; }
+    .hj-footer-heading{ font-weight:900; color:rgba(255,255,255,.88); font-size:14px; margin-bottom:8px; letter-spacing:.2px; }
+    .hj-footer-phone{ font-weight:800; font-size:15px; color:rgba(255,255,255,.85)!important; }
+    .hj-footer-bottom{ display:flex; align-items:center; justify-content:space-between; padding-top:20px; font-size:12.5px; color:rgba(255,255,255,.45); }
+    .hj-footer-bottom p{ margin:0; }
+    .hj-footer-links{ display:flex; gap:20px; }
+    .hj-footer-links a{ color:rgba(255,255,255,.45); font-size:12.5px; }
+    .hj-footer-links a:hover{ color:rgba(255,255,255,.75); }
+    @media(max-width:600px){ .hj-footer-grid{ grid-template-columns:1fr; gap:24px; } .hj-footer-info{ flex-direction:column; gap:20px; } .hj-footer-bottom{ flex-direction:column; gap:12px; text-align:center; } }
   </style>
 </head>
 
@@ -1145,17 +1176,17 @@
     <div class="wrap">
       <div class="hj-navbar-inner">
         <a class="hj-navbar-logo" href="/" aria-label="Hey Jude's Lawn Care home">
-          <img src="https://assets.cdn.filesafe.space/Umlo2UnfqbijiGqNU6g2/media/699087250084985e836cdab6.png" alt="Hey Jude's Lawn Care" />
+          <img src="https://assets.cdn.filesafe.space/Umlo2UnfqbijiGqNU6g2/media/699087250084985e836cdab6.png" alt="Hey Jude's Lawn Care" width="160" height="52" />
         </a>
 
-        <button class="hj-nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.hj-navbar-links').classList.toggle('is-open')">
+        <button class="hj-nav-toggle" aria-label="Toggle menu" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false'?'true':'false');document.querySelector('.hj-navbar-links').classList.toggle('is-open')">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
         </button>
 
         <div class="hj-navbar-links">
           <a href="/">Home</a>
           <div class="hj-nav-dropdown">
-            <a href="/services">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></a>
+            <a href="#" onclick="return false">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></a>
             <div class="hj-nav-dd-menu">
               <a href="/lawn-mowing">Lawn Mowing</a>
               <a href="/mulch-installation">Mulch Installation</a>
@@ -1168,12 +1199,13 @@
             <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8c1.5 3 3.6 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V21c0 .6-.4 1-1 1C11.4 22 2 12.6 2 1c0-.6.4-1 1-1h3.9c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z"/></svg>
             (803) 902-7447
           </a>
-          <a class="hj-nav-cta" href="javascript:void(0)" onclick="if(window.innerWidth>900){window.scrollTo(0,0);document.documentElement.scrollTop=0;document.body.scrollTop=0;}else{var f=document.querySelector('.quote-card');if(f)f.scrollIntoView({behavior:'smooth'});}">Get Quote</a>
+          <a class="hj-nav-cta" href="javascript:void(0)" onclick="if(window.innerWidth>900){document.documentElement.scrollTop=0;document.body.scrollTop=0;}else{var s=document.getElementById('quote-section');if(s)s.scrollIntoView({behavior:'smooth'});}">Get Quote</a>
         </div>
       </div>
     </div>
   </nav>
 
+  <main>
   <!-- HERO -->
   <header class="hero">
     <div class="wrap">
@@ -1182,12 +1214,12 @@
           <div class="hj-badge-wrap">
             <div class="hj-badge" role="status">
               <span class="hj-dot" aria-hidden="true"></span>
-              Mulch Installation • Rock Hill, SC
+              Mulch Installation &bull; Rock Hill, SC
             </div>
           </div>
 
           <h1>Mulch Installation in Rock Hill, SC</h1>
-          <p class="hero-lede">Fresh mulch should make your beds look intentional — not messy, thin, or rushed.</p>
+          <p class="hero-lede">Fresh mulch should make your beds look intentional. Not messy, thin, or rushed.</p>
 
           <div class="hero-copy">
             <p>
@@ -1196,13 +1228,15 @@
           </div>
 
           <div class="btn-row hero-cta-mobile">
-            <a class="btn btn-primary" href="#quote" aria-label="Request your mulch quote">Request Your Mulch Quote</a>
+            <a class="btn btn-primary" href="javascript:void(0)" onclick="if(window.innerWidth>900){document.documentElement.scrollTop=0;document.body.scrollTop=0;}else{var s=document.getElementById('quote-section');if(s)s.scrollIntoView({behavior:'smooth'});}" aria-label="Request your mulch quote">Request Your Mulch Quote</a>
           </div>
         </div>
 
         <div class="hero-form-desktop">
-        <!-- Quick quote multi-step form -->
-        <aside class="quote-card" id="quote" aria-label="Quick quote form">
+        <div id="quote-section">
+          <h2 class="hj-form-section-heading">FREE Quotes</h2>
+          <!-- Quick quote multi-step form -->
+          <aside class="quote-card" id="quote" aria-label="Quick quote form">
           <div class="quote-top">
             <p class="quote-title">Get your free mulch quote</p>
           </div>
@@ -1247,20 +1281,20 @@
               </div>
               <div class="field">
                 <label class="label" for="hero-street">Street address</label>
-                <input class="input" id="hero-street" name="street" placeholder="—" />
+                <input class="input" id="hero-street" name="street" placeholder="-" />
               </div>
               <div style="display:grid; grid-template-columns:1fr .6fr .5fr; gap:10px;">
                 <div class="field">
                   <label class="label" for="hero-city">City</label>
-                  <input class="input" id="hero-city" name="city" placeholder="—" />
+                  <input class="input" id="hero-city" name="city" placeholder="-" />
                 </div>
                 <div class="field">
                   <label class="label" for="hero-state">State</label>
-                  <input class="input" id="hero-state" name="state" placeholder="—" />
+                  <input class="input" id="hero-state" name="state" placeholder="-" />
                 </div>
                 <div class="field">
                   <label class="label" for="hero-zip">Zip</label>
-                  <input class="input" id="hero-zip" name="zip" placeholder="—" />
+                  <input class="input" id="hero-zip" name="zip" placeholder="-" />
                 </div>
               </div>
             </div>
@@ -1289,7 +1323,8 @@
             </div>
             <div class="micro" style="text-align:center; margin-top:8px;">Fast response. Clear pricing. No pressure.</div>
           </form>
-        </aside>
+          </aside>
+        </div>
         </div>
       </div>
     </div>
@@ -1444,7 +1479,7 @@
           <ul class="checklist">
             <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.2 16.6 4.9 12.3l1.6-1.6 2.7 2.7 8-8 1.6 1.6z"/></svg></span><div><strong>Bed cleanup before install</strong><br><span style="color:rgba(255,255,255,.62);">We remove debris, light weeds, and loose buildup so the new mulch sits clean and even.</span></div></li>
             <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.2 16.6 4.9 12.3l1.6-1.6 2.7 2.7 8-8 1.6 1.6z"/></svg></span><div><strong>Defined, clean bed edges</strong><br><span style="color:rgba(255,255,255,.62);">Crisp separation between lawn and bed for a sharp, finished look.</span></div></li>
-            <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.2 16.6 4.9 12.3l1.6-1.6 2.7 2.7 8-8 1.6 1.6z"/></svg></span><div><strong>Proper 2–3 inch depth</strong><br><span style="color:rgba(255,255,255,.62);">Enough coverage to suppress weeds and retain moisture without suffocating plants.</span></div></li>
+            <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.2 16.6 4.9 12.3l1.6-1.6 2.7 2.7 8-8 1.6 1.6z"/></svg></span><div><strong>Proper 2-3 inch depth</strong><br><span style="color:rgba(255,255,255,.62);">Enough coverage to suppress weeds and retain moisture without suffocating plants.</span></div></li>
           </ul>
         </div>
 
@@ -1564,15 +1599,15 @@
         <h2>See the Difference</h2>
       </div>
 
-      <p>Fresh mulch does more than refresh a bed — it sharpens the entire property.</p>
+      <p>Fresh mulch does more than refresh a bed. It sharpens the entire property.</p>
       <p style="font-weight:850; color: rgba(255,255,255,.84);">Clean edges. Even coverage. Defined contrast.</p>
       <p>Drag the slider to see the transformation.</p>
 
       <!-- Before/After Slider -->
       <div class="ba-slider" id="baSlider" style="aspect-ratio:1/1;">
-        <img src="https://storage.googleapis.com/msgsndr/Umlo2UnfqbijiGqNU6g2/media/699328766bac246885c76295.png" alt="Landscape bed before mulch installation — bare soil and faded beds" draggable="false" style="width:100%;height:100%;object-fit:cover;" />
+        <img src="https://storage.googleapis.com/msgsndr/Umlo2UnfqbijiGqNU6g2/media/699328766bac246885c76295.png" alt="Landscape bed before mulch installation - bare soil and faded beds" draggable="false" width="520" height="520" style="width:100%;height:100%;object-fit:cover;" />
         <div class="ba-after" id="baAfter">
-          <img src="https://storage.googleapis.com/msgsndr/Umlo2UnfqbijiGqNU6g2/media/6993287ca9efde6914a42d85.png" alt="Same landscape bed after professional mulch installation — fresh black mulch with clean edges" draggable="false" />
+          <img src="https://storage.googleapis.com/msgsndr/Umlo2UnfqbijiGqNU6g2/media/6993287ca9efde6914a42d85.png" alt="Same landscape bed after professional mulch installation - fresh black mulch with clean edges" draggable="false" width="520" height="520" />
         </div>
         <div class="ba-handle" id="baHandle"></div>
         <span class="ba-label ba-label-before">Before</span>
@@ -1583,13 +1618,13 @@
 
       <div class="gallery-grid">
         <div class="gallery-item">
-          <img src="https://storage.googleapis.com/msgsndr/Umlo2UnfqbijiGqNU6g2/media/699328f51a38a0dff3675981.png" alt="Front porch landscape bed with mulch in Rock Hill" loading="lazy" />
+          <img src="https://storage.googleapis.com/msgsndr/Umlo2UnfqbijiGqNU6g2/media/699328f51a38a0dff3675981.png" alt="Front porch landscape bed with mulch in Rock Hill" loading="lazy" width="400" height="300" />
         </div>
         <div class="gallery-item">
-          <img src="https://storage.googleapis.com/msgsndr/Umlo2UnfqbijiGqNU6g2/media/699328fda9efde207da43d9b.png" alt="Fountain area with fresh black mulch and trimmed boxwoods" loading="lazy" />
+          <img src="https://storage.googleapis.com/msgsndr/Umlo2UnfqbijiGqNU6g2/media/699328fda9efde207da43d9b.png" alt="Fountain area with fresh black mulch and trimmed boxwoods" loading="lazy" width="400" height="300" />
         </div>
         <div class="gallery-item">
-          <img src="https://storage.googleapis.com/msgsndr/Umlo2UnfqbijiGqNU6g2/media/6993293154da0497a847f1c6.png" alt="Large bed with fresh brown mulch and clean edges" loading="lazy" />
+          <img src="https://storage.googleapis.com/msgsndr/Umlo2UnfqbijiGqNU6g2/media/6993293154da0497a847f1c6.png" alt="Large bed with fresh brown mulch and clean edges" loading="lazy" width="400" height="300" />
         </div>
       </div>
     </div>
@@ -1666,6 +1701,13 @@
             Yes. We coordinate material selection and sourcing so your installation is handled from start to finish without you needing to arrange delivery separately.
           </div>
         </details>
+
+        <details class="faq-item">
+          <summary><span>Do you install landscape fabric under the mulch?</span><span class="faq-plus" aria-hidden="true"></span></summary>
+          <div class="faq-body">
+            We recommend against it, but we can install it if you request it. We could sell it as an add-on, but we'd rather be honest about what actually works for your landscape. Mulch is meant to break down into the soil over time and improve it. Fabric blocks that. Weeds still come through anyway because decomposed mulch builds up on top of the fabric and they root right into it. Now you've got a useless layer trapped underneath that's blocking nutrients and water from your soil, and if you ever want it out, you have to remove all the mulch just to get to it. Proper mulch depth handles weed suppression on its own.
+          </div>
+        </details>
       </div>
     </div>
   </section>
@@ -1677,20 +1719,44 @@
         <h2 style="margin:0 0 8px; font-size: clamp(24px, 5vw, 34px); line-height:1.1; font-weight:900; color:var(--hj-white);">Ready to Refresh Your Landscape Beds?</h2>
         <p style="margin:0 0 6px; font-weight:700; font-size:15px; color:var(--hj-muted);">Clean edges. Proper depth. A finished look that holds.</p>
         <p style="margin:0 0 18px; font-weight:720; font-size:14px; color:rgba(255,255,255,.62);">If you're ready to upgrade your mulch installation in Rock Hill, request your quote today and we'll take care of the rest.</p>
-        <a class="btn btn-primary" href="#quote" style="display:inline-flex;">Request Your Mulch Quote</a>
+        <a class="btn btn-primary" href="javascript:void(0)" onclick="if(window.innerWidth>900){document.documentElement.scrollTop=0;document.body.scrollTop=0;}else{var s=document.getElementById('quote-section');if(s)s.scrollIntoView({behavior:'smooth'});}" style="display:inline-flex;">Request Your Mulch Quote</a>
       </div>
     </div>
   </section>
+  </main>
 
-  <footer class="footer">
+  <footer class="hj-footer">
     <div class="wrap">
-      &copy; <span id="y"></span> Hey Jude's Lawn Care &middot; Mulch Installation in Rock Hill, SC &middot; Call/Text (803) 902-7447
+      <div class="hj-footer-grid">
+        <div class="hj-footer-brand">
+          <a href="/" aria-label="Hey Jude's Lawn Care home">
+            <img src="https://assets.cdn.filesafe.space/Umlo2UnfqbijiGqNU6g2/media/699087250084985e836cdab6.png" alt="Hey Jude's Lawn Care" class="hj-footer-logo" width="160" height="40" />
+          </a>
+          <p class="hj-footer-tagline">Raise The Standard.</p>
+        </div>
+        <div class="hj-footer-info">
+          <div class="hj-footer-block">
+            <div class="hj-footer-heading">Hours</div>
+            <p>Monday &ndash; Saturday: 9:00 AM &ndash; 6:00 PM</p>
+            <p>Sunday: Closed</p>
+          </div>
+          <div class="hj-footer-block">
+            <div class="hj-footer-heading">Contact</div>
+            <a href="tel:+18039027447" class="hj-footer-phone">(803) 902-7447</a>
+          </div>
+        </div>
+      </div>
+      <div class="hj-footer-bottom">
+        <p>&copy; 2026 Hey Jude's Lawn Care. All rights reserved.</p>
+        <div class="hj-footer-links">
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/terms-of-service">Terms of Service</a>
+        </div>
+      </div>
     </div>
   </footer>
 
   <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-
     // Before/After slider
     (function(){
       var slider = document.getElementById('baSlider');
@@ -1736,38 +1802,17 @@
     if (document.getElementById('hero-phone')) formatPhone(document.getElementById('hero-phone'));
 
     // Smooth scrolling for in-page anchors
-    (function(){
-      function smoothScrollTo(hash){
-        var el = document.querySelector(hash);
-        if(!el) return false;
-        if (hash === '#quote' && window.innerWidth > 900) {
-          document.getElementById('hj-navbar').scrollIntoView({ behavior: 'smooth' });
-        } else {
-          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-        return true;
-      }
-      document.addEventListener('click', function(e){
-        var a = e.target.closest('a[href^="#"]');
-        if(!a) return;
-        var hash = a.getAttribute('href');
-        if(!hash || hash.length <= 1) return;
-        e.preventDefault();
-        // Close mobile menu if open
-        var menu = document.querySelector('.hj-navbar-links');
-        if(menu) menu.classList.remove('is-open');
-        // For #quote on desktop, scroll to top (form is in hero)
-        if(hash === '#quote' && window.innerWidth > 900){
-          var nav = document.querySelector('.hj-navbar');
-          if(nav) nav.scrollIntoView({ behavior: 'smooth' });
-          else document.documentElement.scrollTop = 0;
-        } else {
-          var el = document.querySelector(hash);
-          if(el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-        history.replaceState(null, '', hash);
-      });
-    })();
+    document.addEventListener('click', function(e){
+      var a = e.target.closest('a[href^="#"]');
+      if(!a) return;
+      var hash = a.getAttribute('href');
+      if(!hash || hash.length <= 1) return;
+      e.preventDefault();
+      var menu = document.querySelector('.hj-navbar-links');
+      if(menu) menu.classList.remove('is-open');
+      var el = document.querySelector(hash);
+      if(el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
 
     // Close mobile menu on any link click
     (function(){
@@ -1799,7 +1844,7 @@
 
     // Move form between hero (desktop) and its own section (mobile)
     (function(){
-      var form = document.getElementById('quote');
+      var form = document.getElementById('quote-section');
       var desktopSlot = document.querySelector('.hero-form-desktop');
       var mobileSlot = document.querySelector('#mobile-form-section .wrap');
       if (!form || !desktopSlot || !mobileSlot) return;
