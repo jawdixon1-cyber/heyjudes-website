@@ -1,11 +1,41 @@
 User-agent: *
 Allow: /
+
+# Pages that exist but should NOT be indexed
+Disallow: /thank-you
+Disallow: /thankyou
+Disallow: /thank-you-leaf-cleanup
+Disallow: /privacy-policy
+Disallow: /apply
+Disallow: /confirmation
+Disallow: /fbconfirmation
+
+# Internal/unpublished pages
 Disallow: /client-update
+Disallow: /client-update.backup
 Disallow: /ex-client
 Disallow: /door-hanger
 Disallow: /hiring
-Disallow: /thank-you
-Disallow: /thankyou
-Disallow: /client-update.backup
+Disallow: /refer
+Disallow: /service-agreement
+
+# Old/deleted pages (tell Google to stop crawling)
+Disallow: /reviews
+Disallow: /mowtivated
+Disallow: /leaf-cleanup-pricing
+Disallow: /mowing
+Disallow: /aeration
+Disallow: /home-544594
+Disallow: /yardlife
+Disallow: /our-work
+Disallow: /services
+Disallow: /cleanups
+Disallow: /undefined
+Disallow: /personal-routing
+Disallow: /facebook
+
+# Block GHL internal/builder paths
+Disallow: /tmp/
+Disallow: /_preview/
 
 Sitemap: https://heyjudeslawncare.com/sitemap.xml

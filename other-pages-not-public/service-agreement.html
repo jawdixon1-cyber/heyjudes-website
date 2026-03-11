@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hey Jude's Lawn Care — Annual Service Agreement</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  @page {
+    size: letter;
+    margin: 0;
+  }
+
+  body {
+    font-family: 'Montserrat', -apple-system, system-ui, sans-serif;
+    font-size: 11.5px;
+    line-height: 1.55;
+    color: #fff;
+    background: #000;
+  }
+
+  .page {
+    max-width: 8.5in;
+    margin: 0 auto;
+    background: #000;
+  }
+
+  /* Hero header */
+  .hero-header {
+    position: relative;
+    background: linear-gradient(160deg, #0a0a0a 0%, #111 50%, #0a1a00 100%);
+    padding: 48px 52px 40px;
+    border-bottom: 3px solid #B0FF03;
+    overflow: hidden;
+  }
+  .hero-header::before {
+    content: "";
+    position: absolute;
+    top: -40%;
+    right: -10%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(176,255,3,.08) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .hero-header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+  }
+  .hero-logo img {
+    height: 56px;
+    width: auto;
+  }
+  .hero-title {
+    text-align: right;
+  }
+  .hero-title h1 {
+    font-size: 24px;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: -0.5px;
+  }
+  .hero-title p {
+    font-size: 11px;
+    color: rgba(255,255,255,.5);
+    margin-top: 2px;
+    font-weight: 600;
+  }
+
+  /* Content area */
+  .content {
+    padding: 32px 52px 40px;
+  }
+
+  /* Section titles */
+  h2 {
+    font-size: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #B0FF03;
+    margin: 32px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+  }
+  h2:first-child { margin-top: 0; }
+
+  h3 {
+    font-size: 12px;
+    font-weight: 700;
+    color: rgba(255,255,255,.9);
+    margin: 16px 0 6px;
+  }
+
+  p, li {
+    font-size: 11px;
+    color: rgba(255,255,255,.72);
+    line-height: 1.65;
+    font-weight: 500;
+  }
+
+  strong { color: rgba(255,255,255,.92); }
+
+  ul, ol {
+    padding-left: 18px;
+    margin: 6px 0;
+  }
+  li { margin-bottom: 5px; }
+
+  /* Editable fields */
+  .field {
+    display: inline-block;
+    min-width: 160px;
+    border-bottom: 1px solid rgba(255,255,255,.35);
+    padding: 2px 6px;
+    font-weight: 700;
+    color: #fff;
+  }
+  .field-short { min-width: 70px; }
+  .field-med { min-width: 110px; }
+
+  /* Client info grid */
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 32px;
+    margin: 14px 0;
+  }
+  .info-row {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    font-size: 11px;
+  }
+  .info-label {
+    font-weight: 700;
+    color: rgba(255,255,255,.5);
+    white-space: nowrap;
+    min-width: 95px;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .info-value {
+    flex: 1;
+    border-bottom: 1px solid rgba(255,255,255,.25);
+    padding: 2px 4px;
+    min-height: 20px;
+  }
+
+  /* Service table */
+  .service-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0;
+    font-size: 10.5px;
+  }
+  .service-table th {
+    background: rgba(176,255,3,.08);
+    font-weight: 800;
+    font-size: 9.5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #B0FF03;
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid rgba(176,255,3,.2);
+  }
+  .service-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid rgba(255,255,255,.06);
+    vertical-align: top;
+    color: rgba(255,255,255,.78);
+    font-weight: 500;
+  }
+  .service-table .svc-name {
+    font-weight: 700;
+    color: rgba(255,255,255,.92);
+    font-size: 11px;
+  }
+  .service-table .svc-desc {
+    font-size: 9.5px;
+    color: rgba(255,255,255,.45);
+    font-weight: 500;
+    margin-top: 2px;
+  }
+  .service-table .total-row td {
+    font-weight: 900;
+    font-size: 12px;
+    color: #fff;
+    background: rgba(176,255,3,.06);
+    border-top: 1px solid rgba(176,255,3,.25);
+    border-bottom: 2px solid #B0FF03;
+    padding: 12px;
+  }
+
+  /* Callout box */
+  .callout {
+    background: rgba(176,255,3,.06);
+    border: 1px solid rgba(176,255,3,.2);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 16px 0;
+    font-size: 11px;
+  }
+  .callout strong {
+    color: #B0FF03;
+    font-size: 13px;
+  }
+
+  /* Signature block */
+  .sig-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 36px;
+  }
+  .sig-label {
+    font-size: 9.5px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #B0FF03;
+    margin-bottom: 6px;
+  }
+  .sig-line {
+    border-bottom: 1px solid rgba(255,255,255,.25);
+    height: 32px;
+    margin-bottom: 4px;
+  }
+  .sig-sub {
+    font-size: 9px;
+    color: rgba(255,255,255,.35);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* Feature strip */
+  .feature-strip {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    padding: 14px 0;
+    margin: 20px 0 0;
+    border-top: 1px solid rgba(255,255,255,.06);
+  }
+  .feature-pill {
+    font-size: 9.5px;
+    font-weight: 800;
+    color: rgba(255,255,255,.5);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .feature-pill span {
+    color: #B0FF03;
+    margin-right: 4px;
+  }
+
+  /* Footer */
+  .doc-footer {
+    margin-top: 36px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255,255,255,.08);
+    text-align: center;
+    font-size: 9.5px;
+    color: rgba(255,255,255,.3);
+    font-weight: 600;
+  }
+
+  /* Page break */
+  .page-break {
+    page-break-before: always;
+  }
+
+  @media print {
+    body { background: #000; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .no-print { display: none; }
+    .hero-header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Print button -->
+<div class="no-print" style="text-align:center;padding:20px;">
+  <button onclick="window.print()" style="padding:12px 32px;font-size:14px;font-weight:800;background:#B0FF03;color:#000;border:none;border-radius:10px;cursor:pointer;font-family:Montserrat;">Save as PDF</button>
+</div>
+
+<div class="page">
+
+<!-- HERO HEADER -->
+<div class="hero-header">
+  <div class="hero-header-inner">
+    <div class="hero-logo">
+      <img src="https://assets.cdn.filesafe.space/Umlo2UnfqbijiGqNU6g2/media/69a0cc399185ff63f8649cd6.png" alt="Hey Jude's Lawn Care" />
+    </div>
+    <div class="hero-title">
+      <h1>Annual Service Agreement</h1>
+      <p>Rock Hill, SC &bull; (803) 902-7447 &bull; heyjudeslawncare.com</p>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+
+<p style="font-size:10px;color:rgba(255,255,255,.45);font-weight:600;font-style:italic;margin-bottom:24px;">This agreement is attached to and forms part of your service quote. By signing the quote, you agree to the terms outlined below.</p>
+
+<!-- CLIENT INFO -->
+<h2>Client Information</h2>
+<div class="info-grid">
+  <div class="info-row">
+    <span class="info-label">Full Name</span>
+    <span class="info-value">Jane Elmore</span>
+  </div>
+  <div class="info-row">
+    <span class="info-label">Phone</span>
+    <span class="info-value">(714) 745-7173</span>
+  </div>
+  <div class="info-row">
+    <span class="info-label">Email</span>
+    <span class="info-value">bamajane13@gmail.com</span>
+  </div>
+  <div class="info-row">
+    <span class="info-label">Service Address</span>
+    <span class="info-value">468 Harvest Moon Lane</span>
+  </div>
+  <div class="info-row">
+    <span class="info-label">City / State / Zip</span>
+    <span class="info-value">Rock Hill, SC 29732</span>
+  </div>
+
+</div>
+
+<!-- AGREEMENT TERM -->
+<h2>Agreement Term</h2>
+<p>This agreement begins <strong>March 1, 2026</strong> and continues for a period of <strong>twelve (12) consecutive months</strong>, ending <strong>February 28, 2027</strong>. Services will automatically renew for an additional 12-month term unless either party provides written notice at least 30 days prior to the renewal date.</p>
+
+<!-- SERVICES INCLUDED -->
+<h2>Services Included</h2>
+<p>The following services are included in this agreement. All services are scheduled and performed by Hey Jude's Lawn Care according to the frequency listed below.</p>
+
+<!-- Service Breakdown Cards -->
+<div style="display:flex;flex-direction:column;gap:16px;margin:16px 0;">
+
+  <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:18px 20px;">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;">
+      <div class="svc-name" style="font-weight:800;font-size:12px;color:#fff;">Lawn Maintenance</div>
+      <div style="font-size:10px;font-weight:700;color:#B0FF03;background:rgba(176,255,3,.08);padding:3px 10px;border-radius:6px;">Every other week &bull; Mar - Oct</div>
+    </div>
+    <ul style="padding-left:16px;margin:0;">
+      <li>Mow entire lawn at the proper height for your grass type</li>
+      <li>String trim around all stationary obstacles (fences, trees, beds, mailbox, etc.)</li>
+      <li>Edge along all sidewalks, driveways, and curbs for clean lines</li>
+      <li>Edge around landscape beds to create a clean divider between grass and beds, keeping grass and weeds from creeping in</li>
+      <li>Blow all clippings off driveways, sidewalks, porches, and hard surfaces into the lawn</li>
+    </ul>
+  </div>
+
+  <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:18px 20px;">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;">
+      <div class="svc-name" style="font-weight:800;font-size:12px;color:#fff;">Leaf Maintenance</div>
+      <div style="font-size:10px;font-weight:700;color:#B0FF03;background:rgba(176,255,3,.08);padding:3px 10px;border-radius:6px;">Every other week &bull; Nov - Feb</div>
+    </div>
+    <ul style="padding-left:16px;margin:0;">
+      <li>Blow all leaves off landscape beds, porches, walkways, driveways, and hard surfaces</li>
+      <li>Mulch leaves into the lawn to return nutrients to the soil</li>
+      <li>Trim grass as needed to keep the lawn tidy during leaf season</li>
+      <li>Keep beds and the entire property looking clean</li>
+    </ul>
+  </div>
+
+  <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:18px 20px;">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;">
+      <div class="svc-name" style="font-weight:800;font-size:12px;color:#fff;">Stick Pickup</div>
+      <div style="font-size:10px;font-weight:700;color:#B0FF03;background:rgba(176,255,3,.08);padding:3px 10px;border-radius:6px;">Every visit &bull; Year-round</div>
+    </div>
+    <ul style="padding-left:16px;margin:0;">
+      <li>Pick up all sticks on the property every visit</li>
+      <li>Disposed off-site</li>
+    </ul>
+  </div>
+
+  <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:18px 20px;">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;">
+      <div class="svc-name" style="font-weight:800;font-size:12px;color:#fff;">Hedge Trimming</div>
+      <div style="font-size:10px;font-weight:700;color:#B0FF03;background:rgba(176,255,3,.08);padding:3px 10px;border-radius:6px;">3x per year &bull; Apr, Jul, Oct</div>
+    </div>
+    <ul style="padding-left:16px;margin:0;">
+      <li>Shape and trim all shrubs, bushes, and hedges on the property</li>
+      <li>Remove all clippings and debris from beds and surrounding areas</li>
+      <li>Maintain natural shape while keeping growth in check</li>
+    </ul>
+  </div>
+
+  <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:18px 20px;">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;">
+      <div class="svc-name" style="font-weight:800;font-size:12px;color:#fff;">Aeration &amp; Overseeding</div>
+      <div style="font-size:10px;font-weight:700;color:#B0FF03;background:rgba(176,255,3,.08);padding:3px 10px;border-radius:6px;">1x per year &bull; October</div>
+    </div>
+    <ul style="padding-left:16px;margin:0;">
+      <li>Core aerate the entire lawn with commercial-grade equipment</li>
+      <li>Overseed at 5 lbs per 1,000 sq ft using LESCO Tall Fescue Select Blend — a certified, professional-grade seed mix bred for strong root development, drought tolerance, and year-round color in our climate</li>
+      <li>Provide clear aftercare instructions for watering and first mow timing</li>
+      <li>Plugs are left on the lawn to break down naturally and feed the soil</li>
+    </ul>
+  </div>
+
+  <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:18px 20px;">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;">
+      <div class="svc-name" style="font-weight:800;font-size:12px;color:#fff;">Pine Straw Installation</div>
+      <div style="font-size:10px;font-weight:700;color:#B0FF03;background:rgba(176,255,3,.08);padding:3px 10px;border-radius:6px;">1x per year &bull; February</div>
+    </div>
+    <ul style="padding-left:16px;margin:0;">
+      <li>Install fresh long-leaf pine straw in all landscape beds</li>
+      <li>Roll and tuck edges for a clean, finished border</li>
+      <li>Clear straw off bushes, plants, and any hard surfaces</li>
+      <li>Even coverage at proper depth for weed suppression and moisture retention</li>
+      <li>All old straw is worked into the base layer for a uniform look</li>
+    </ul>
+  </div>
+
+</div>
+
+
+<!-- PRICING -->
+<h2>Pricing &amp; Payment</h2>
+<div class="callout">
+  <strong>$575 /month</strong> <span style="color:rgba(255,255,255,.4);font-size:11px;font-weight:600;">($6,900 /year)</span><br>
+  <span style="color:rgba(255,255,255,.55);">Total annual cost divided by 12 equal monthly payments. Same price every month, year-round.</span>
+</div>
+
+<ul>
+  <li><strong>Billing:</strong> Client will be billed on the 1st of each month via autopay.</li>
+  <li><strong>Payment method:</strong> Credit card or ACH on file. Your card is charged automatically each month, just like a subscription. No invoices to remember, no manual payments.</li>
+  <li><strong>Late payments:</strong> Payments not received within 7 days of the billing date may result in a temporary pause of services until the balance is resolved.</li>
+  <li><strong>Price lock:</strong> Pricing is locked for the 12-month term. Any changes will be discussed and agreed upon in writing before renewal.</li>
+</ul>
+
+<div class="feature-strip">
+  <div class="feature-pill"><span>&#10003;</span> Licensed &amp; Insured</div>
+  <div class="feature-pill"><span>&#10003;</span> No Surprise Fees</div>
+  <div class="feature-pill"><span>&#10003;</span> 134 Five-Star Reviews</div>
+</div>
+
+<!-- SCHEDULE -->
+<h2>Scheduling &amp; Service Visits</h2>
+<ul>
+  <li>Services are performed <strong>every other week, year-round</strong>, for predictable service and consistent curb appeal.</li>
+  <li>If weather or conditions prevent service, we will notify you of your updated service date.</li>
+  <li>Seasonal services (aeration, leaf cleanup, pine straw) are scheduled during their optimal windows and coordinated with you in advance.</li>
+  <li>You will receive a reminder the day before your service and an on-the-way text when our crew is headed to your property.</li>
+  <li>All schedule changes are communicated via text or phone.</li>
+</ul>
+
+<!-- WHAT'S INCLUDED -->
+<h2>What's Included</h2>
+<ul>
+  <li>Sharp curb appeal, zero stress — we handle everything so you don't have to</li>
+  <li>All labor, equipment, and materials are provided by Hey Jude's Lawn Care — fully covered under this agreement</li>
+  <li>Day-before service reminders and on-the-way texts</li>
+  <li>Clean-up after every service (blowing walkways, driveways, etc.)</li>
+  <li>Each service is scheduled during its optimal season — mowing Mar–Oct, leaf maintenance Nov–Feb, hedge trimming Apr/Jul/Oct, aeration &amp; overseeding in October, and pine straw in February</li>
+  <li>Satisfaction guarantee — not happy with a visit? Let us know within 48 hours and we'll come back and make it right at no additional cost</li>
+</ul>
+
+<!-- WHAT'S NOT INCLUDED -->
+<h2>What's Not Included</h2>
+<ul>
+  <li>Fertilization and weed control (can be quoted separately)</li>
+  <li>Irrigation repair or installation</li>
+  <li>Tree removal or large-scale grading</li>
+  <li>Any services not explicitly listed in the service table above</li>
+</ul>
+
+<!-- CANCELLATION -->
+<h2>Cancellation &amp; Early Termination</h2>
+<ul>
+  <li><strong>Cancellation with notice:</strong> Either party may cancel by providing <strong>30 days written notice</strong> (email or text).</li>
+  <li><strong>Early termination:</strong> If Client cancels before the 12-month term is complete, any seasonal services already performed but not yet fully paid off through monthly payments (e.g., pine straw installation, aeration &amp; overseeding) will be billed in full at their retail price. An additional early termination fee of $200 will also apply.</li>
+  <li><strong>No fee cancellation:</strong> If Hey Jude's Lawn Care fails to perform services as agreed, Client may cancel without penalty after written notice and a 14-day cure period.</li>
+  <li><strong>Refunds:</strong> No refunds for services already performed. If a seasonal service has not yet been performed, that portion will be credited or refunded.</li>
+</ul>
+
+<!-- CLIENT RESPONSIBILITIES -->
+<h2>Client Responsibilities</h2>
+<ul>
+  <li>Ensure service areas are accessible on scheduled days (gates unlocked or unlockable from outside, vehicles moved away from grass, pets secured)</li>
+  <li>Remove dog toys, hoses, and other loose items from the lawn before service. If our crew has to spend more than 5 minutes clearing the lawn before work can begin, a $10 cleanup fee will be applied.</li>
+  <li>Maintain a valid payment method on file for the duration of this agreement</li>
+  <li>Notify us of any changes to property access, contact info, or special requests</li>
+</ul>
+
+<!-- SATISFACTION -->
+<h2>Satisfaction Guarantee</h2>
+<p>Not happy with a service visit? Let us know within 48 hours and we'll come back and make it right at no additional cost. We stand behind every job.</p>
+
+<!-- LIABILITY -->
+<h2>Liability &amp; Property</h2>
+<ul>
+  <li>Hey Jude's Lawn Care is licensed and insured. We carry general liability insurance for your protection.</li>
+  <li>If any damage occurs as a direct result of our work, we will repair or compensate for it.</li>
+  <li>We are not responsible for pre-existing conditions, unmarked underground utilities, or damage caused by weather or factors outside our control.</li>
+</ul>
+
+<p style="margin-top:24px;font-size:11px;color:rgba(255,255,255,.55);font-weight:600;">Upon approval of this quote, we will send you your scheduled service dates.</p>
+
+<!-- FOOTER -->
+<div class="doc-footer">
+  Hey Jude's Lawn Care &bull; Rock Hill, SC &bull; (803) 902-7447 &bull; heyjudeslawncare.com
+</div>
+
+</div><!-- /content -->
+</div><!-- /page -->
+
+</body>
+</html>
